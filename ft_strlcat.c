@@ -6,7 +6,7 @@
 /*   By: fgeorgea <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 18:50:46 by fgeorgea          #+#    #+#             */
-/*   Updated: 2022/10/04 16:26:30 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2022/10/04 19:02:11 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	dlen = ft_strlen(dst);
 	i = 0;
 	j = 0;
+	if ((!dst || !src) && dstsize == 0)
+		return (0);
 	if (dstsize < dlen)
 		return (dstsize + slen);
 	while (dst[i] && i < dstsize)
