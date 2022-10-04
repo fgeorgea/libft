@@ -6,12 +6,11 @@
 /*   By: fgeorgea <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 13:23:48 by fgeorgea          #+#    #+#             */
-/*   Updated: 2022/10/03 15:11:20 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2022/10/04 10:48:27 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
+#include "libft.h"
 
 void	*ft_memset(void *b, int c, size_t len)
 {

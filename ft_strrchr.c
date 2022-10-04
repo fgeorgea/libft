@@ -6,12 +6,11 @@
 /*   By: fgeorgea <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 14:27:06 by fgeorgea          #+#    #+#             */
-/*   Updated: 2022/10/03 14:43:11 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2022/10/04 10:50:20 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h> // a enlever
-#include <stdio.h> // a enlever
+#include "libft.h"
 
 size_t	ft_strlen(const char *s)
 {

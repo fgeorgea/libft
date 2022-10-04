@@ -6,12 +6,11 @@
 /*   By: fgeorgea <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 13:49:09 by fgeorgea          #+#    #+#             */
-/*   Updated: 2022/10/03 19:41:22 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2022/10/04 10:46:54 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-#include <stdio.h>
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {

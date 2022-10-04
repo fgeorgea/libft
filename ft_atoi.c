@@ -6,13 +6,11 @@
 /*   By: fgeorgea <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 17:12:03 by fgeorgea          #+#    #+#             */
-/*   Updated: 2022/10/03 19:37:22 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2022/10/04 10:47:11 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
-#include <limits.h>
+#include "libft.h"
 
 int	ft_atoi(const char *str)
 {
