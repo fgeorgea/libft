@@ -6,7 +6,7 @@
 /*   By: fgeorgea <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 17:12:03 by fgeorgea          #+#    #+#             */
-/*   Updated: 2022/10/04 16:32:47 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2022/10/04 16:43:07 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int	ft_atoi(const char *str)
 		++i;
 	}
 	if (negative)
-		return (-cout);
+		return (-count);
 	return (count);
 }
 /*

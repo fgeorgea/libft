@@ -6,7 +6,7 @@
 #    By: fgeorgea <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/03 11:47:36 by fgeorgea          #+#    #+#              #
-#    Updated: 2022/10/04 16:12:35 by fgeorgea         ###   ########.fr        #
+#    Updated: 2022/10/04 16:34:38 by fgeorgea         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,6 +35,8 @@ SRCS = ft_atoi.c\
 	   ft_memmove.c\
 	   ft_strncmp.c\
 	   ft_memchr.c\
+	   ft_calloc.c\
+	
 
 OBJS = $(SRCS:.c=.o)
 
