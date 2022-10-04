@@ -6,21 +6,11 @@
 /*   By: fgeorgea <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 18:50:46 by fgeorgea          #+#    #+#             */
-/*   Updated: 2022/10/04 10:49:06 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2022/10/04 16:26:30 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-size_t	ft_strlen(const char *s)
-{
-	size_t	i;
-
-	i = 0;
-	while (s[i])
-		++i;
-	return (i);
-}
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
@@ -35,7 +25,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	j = 0;
 	if (dstsize < dlen)
 		return (dstsize + slen);
-	while (dst[i])
+	while (dst[i] && i < dstsize)
 		++i;
 	while (src[j] && i < dstsize - 1 && dstsize != 0)
 	{
@@ -46,7 +36,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	dst[i] = '\0';
 	return (slen + dlen);
 }
-/*
+
 int	main(void)
 {
 	char	src[] = "Felix !";
@@ -54,7 +44,7 @@ int	main(void)
 	char	src2[] = "Felix !";
 	char	dst2[16] = "Coucou ";
 	
-	printf("Vanilla len:  %lu\nVanilla dest: %s\nVanilla src: %s\n", strlcat(dst, src, 8), dst,  src);
-	printf("My len:  %zu\nMy dst: %s\nMy src: %s\n", ft_strlcat(dst2, src2, 8), dst2, src2);
+	printf("Vanilla len:  %lu\nVanilla dest: %s\nVanilla src: %s\n", strlcat(dst, NULL, 0), dst,  src);
+	printf("My len:  %zu\nMy dst: %s\nMy src: %s\n", ft_strlcat(dst2, NULL, 0), dst2, src2);
 }
-*/
+

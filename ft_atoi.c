@@ -6,7 +6,7 @@
 /*   By: fgeorgea <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 17:12:03 by fgeorgea          #+#    #+#             */
-/*   Updated: 2022/10/04 10:47:11 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2022/10/04 16:32:47 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,20 +36,15 @@ int	ft_atoi(const char *str)
 		count += str[i] - 48;
 		++i;
 	}
-	if (i >= 15 && !negative)
-		return (-1);
-	else if (i >= 21 && negative)
-		return (0);
-	else if (negative)
-		return (-count);
-	else
-		return (count);
+	if (negative)
+		return (-cout);
+	return (count);
 }
-
+/*
 int	main(void)
 {
 	char	str[] = "214748364955555";
 	printf("Vanilla: %d\n", atoi(str));
 	printf("Mine: %d\n", ft_atoi(str));
 }
-
+*/

@@ -6,7 +6,7 @@
 /*   By: fgeorgea <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 16:38:15 by fgeorgea          #+#    #+#             */
-/*   Updated: 2022/10/04 10:48:08 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2022/10/04 16:09:25 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,18 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	size_t			i;
-	unsigned char	*temp;
-
-	i = 0;
-	temp = (unsigned char *)src;
-	while (i < len)
+	size_t	i;
+	if (!src && !dst)
+		return (NULL);
+	i = len;
+	while (i > 0)
 	{
-		*(unsigned char *)(dst + i) = *(temp + i);
-		++i;
+		--i;
+		*(char *)(dst + i) = *(char *)(src + i);
 	}
 	return (dst);
 }
+
 /*
 int	main(void)
 {
@@ -35,7 +35,8 @@ int	main(void)
 	char	dest2[] = "hello aldj";
 	char	src2[] = "felix";
 
-	printf("%s\n", memmove(dest, src, 5));
-	printf("%s\n", ft_memmove(dest2, src2, 5));
+	printf("Vanilla: %s\n", memmove(&dest[4], src, 5));
+	printf("Result: %s\n", ft_memmove(&dest2[4], src2, 5));
+	printf("%d", dest > src);
 }
 */

@@ -6,7 +6,7 @@
 /*   By: fgeorgea <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 13:54:13 by fgeorgea          #+#    #+#             */
-/*   Updated: 2022/10/04 11:40:03 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2022/10/04 14:48:58 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,15 @@
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-
-	while (n > 0)
+	size_t	i;
+	
+	if (!dst && !src)
+		return (NULL);	
+	i = 0;
+	while (i < n)
 	{
-		*(unsigned char *)(dst + n - 1) = *(unsigned char *)(src + n - 1);
-		n--;
+		*(unsigned char *)(dst + i) = *(unsigned char *)(src + i);
+		++i;
 	}
 	return (dst);
 }
@@ -27,11 +31,10 @@ int    main(void)
 {
     char        str1[] = "0123456789";
     char        str2[] = "0123456789";
-    size_t      n = 5;
 
-    memcpy(&str1[4], str1, n);
+    memcpy(&str1[4], str1, 5);
     printf("real : %s\n", str1);
-    ft_memcpy(&str2[4], str2, n);
+    ft_memcpy(&str2[4], str2, 5);
     printf("mine : %s\n", str2);
 }
 */

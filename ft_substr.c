@@ -1,37 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fgeorgea <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/03 14:27:06 by fgeorgea          #+#    #+#             */
-/*   Updated: 2022/10/04 15:20:13 by fgeorgea         ###   ########.fr       */
+/*   Created: 2022/10/04 11:43:50 by fgeorgea          #+#    #+#             */
+/*   Updated: 2022/10/04 15:30:54 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
+	char	*str;
 	size_t	i;
 
-	i = ft_strlen(s);
-	if (i == 0)
+	if (!s)
 		return (NULL);
-	while (i > 0)
+	if ((size_t)start > ft_strlen(s))
+		return (ft_strdup(""));
+	if (ft_strlen(s) >= len)
+		str = malloc(sizeof(char) * (len + 1));
+	else
+		str = malloc(sizeof(char) * (ft_strlen(s) + 1));
+	if (!str)
+		return (NULL);
+	i = 0;
+	while (i < len && s[i])
 	{
-		if (s[i] == (char)c)
-			return ((char *)(s + i));
-		i--;
+		str[i] = s[start];
+		++i;
+		++start;
 	}
-	return (NULL);
+	str[i] = '\0';
+	return (str);
 }
-
 /*
 int	main(void)
 {
-	printf("Vanilla: %s\n", strrchr("fefeflelelefe", 'f'));
-	printf("Mine: %s\n", ft_strrchr("fefeflelelefe", 'f'));
+	char	str[] = "felix est content";
+	printf("%s", ft_substr(str, 50, ));
 }
 */

@@ -6,17 +6,37 @@
 #    By: fgeorgea <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/03 11:47:36 by fgeorgea          #+#    #+#              #
-#    Updated: 2022/10/04 11:41:45 by fgeorgea         ###   ########.fr        #
+#    Updated: 2022/10/04 16:12:35 by fgeorgea         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
-SRCS = ft_*.c # attention aux wildcards
+SRCS = ft_atoi.c\
+	   ft_bzero.c\
+	   ft_isalnum.c\
+	   ft_isalpha.c\
+	   ft_isdigit.c\
+	   ft_isascii.c\
+	   ft_isprint.c\
+	   ft_strchr.c\
+	   ft_toupper.c\
+	   ft_tolower.c\
+	   ft_strrchr.c\
+	   ft_strnstr.c\
+	   ft_strlen.c\
+	   ft_strlcpy.c\
+	   ft_strlcat.c\
+	   ft_strdup.c\
+	   ft_substr.c\
+	   ft_strjoin.c\
+	   ft_memset.c\
+	   ft_memcpy.c\
+	   ft_memmove.c\
+	   ft_strncmp.c\
+	   ft_memchr.c\
 
-INCS = libft.h
-
-OBJS = $(SRC:.c=.o)
+OBJS = $(SRCS:.c=.o)
 
 CFLAGS = -Wall -Wextra -Werror
 
@@ -25,12 +45,12 @@ CC = gcc
 RM = rm -f
 
 .c.o:
-	@$(CC) $(FLAGS) -c $< -o $(<:.c=.o) -I $(INCS)
+	@$(CC) $(FLAGS) -c $< -o $(<:.c=.o)
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	@ar rc $(NAME) $(OBJS)
+	@ar -rc $(NAME) $(OBJS)
 
 clean: 
 	@$(RM) $(OBJS)

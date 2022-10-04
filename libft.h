@@ -6,7 +6,7 @@
 /*   By: fgeorgea <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 13:09:01 by fgeorgea          #+#    #+#             */
-/*   Updated: 2022/10/04 11:16:49 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2022/10/04 16:11:30 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <unistd.h>
 # include <string.h> // a enlever
 # include <stdio.h> // a enelver
+# include <ctype.h> // a enlever
 # include <stdlib.h>
 
 int		ft_atoi(const char *str);
@@ -37,6 +38,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 char	*ft_strrchr(const char *s, int c);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
-
-
+char	*ft_strdup(const char *s1);
+char	*ft_strjoin(char const *s1, char const *s2);
+void	*ft_memchr(const void *s, int c, size_t n);
 #endif
