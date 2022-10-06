@@ -6,7 +6,7 @@
 /*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 17:12:03 by fgeorgea          #+#    #+#             */
-/*   Updated: 2022/10/06 15:04:00 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2022/10/06 17:07:50 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,10 +55,10 @@ int	ft_atoi(const char *str)
 	}
 	return (ft_check_limits(negative, count));
 }
-/*
+
 int	main(void)
 {
-	char	str[] = "10";
+	char	str[] = "-2147483649999999999999";
 	printf("Vanilla: %d\n", atoi(str));
 	printf("Mine:    %d\n", ft_atoi(str));
-}*/
+}

@@ -6,7 +6,7 @@
 #    By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/03 11:47:36 by fgeorgea          #+#    #+#              #
-#    Updated: 2022/10/06 16:31:26 by fgeorgea         ###   ########.fr        #
+#    Updated: 2022/10/06 18:08:14 by fgeorgea         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,9 +45,15 @@ SRCS = ft_atoi.c\
    	   ft_putnbr_fd.c\
 	   ft_memcmp.c\
 	   ft_strmapi.c\
-
+	   ft_striteri.c\
+	   
 SRCS_BONUS = ft_lstnew.c\
 			 ft_lstadd_front.c\
+			 ft_lstsize.c\
+			 ft_lstlast.c\
+			 ft_lstadd_back.c\
+			 ft_lstdelone.c\
+			 
 
 OBJS = $(SRCS:.c=.o)
 

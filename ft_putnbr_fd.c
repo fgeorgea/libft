@@ -6,7 +6,7 @@
 /*   By: fgeorgea <fgeorgea@sutdent.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 17:54:35 by fgeorgea          #+#    #+#             */
-/*   Updated: 2022/10/06 16:36:13 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2022/10/06 17:15:43 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_putnbr_fd(int n, int fd)
 {
 	unsigned int	nb;
-	
+
 	nb = n;
 	if (nb < 0)
 	{

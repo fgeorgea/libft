@@ -1,32 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/04 16:34:14 by fgeorgea          #+#    #+#             */
-/*   Updated: 2022/10/06 17:14:20 by fgeorgea         ###   ########.fr       */
+/*   Created: 2022/10/06 17:16:01 by fgeorgea          #+#    #+#             */
+/*   Updated: 2022/10/06 17:32:10 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t count, size_t size)
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	void	*res;
+	size_t	i;
 
-	res = NULL;
-	res = malloc(count * size);
-	if (!res)
-		return (NULL);
-	bzero(res, count * size);
-	return (res);
+	i = 0;
+	if (!s)
+		return ;
+	while (*s)
+	{
+		(*f)(i, &(*s));
+		++i;
+		s++;
+	}
 }
 /*
+void	f(unsigned int i, char *c)
+{
+	*c += i;
+}
+
 int	main(void)
 {
-	printf("Vanilla:   %s\n", calloc(0, 0));
-	printf("My result: %s\n", ft_calloc(0, 0));
-}
-*/
+	char	str[] = "felix coucou";
+
+	ft_striteri(str, &f);
+	printf("%s", str);
+}*/
