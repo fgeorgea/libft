@@ -6,7 +6,7 @@
 /*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 17:12:03 by fgeorgea          #+#    #+#             */
-/*   Updated: 2022/10/06 14:09:52 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2022/10/06 14:33:05 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static int	ft_isspace(char c)
 	return (0);
 }
 
-unsigned long int ft_check_limits(int negative, unsigned long int count)
+unsigned long int	ft_check_limits(int negative, unsigned long int count)
 {
 	if ((count > (unsigned)LONG_MAX) && negative == 0)
 		return (-1);
