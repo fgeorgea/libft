@@ -6,7 +6,7 @@
 /*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 13:09:01 by fgeorgea          #+#    #+#             */
-/*   Updated: 2022/10/05 17:54:25 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2022/10/06 11:11:51 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <stdio.h> // a enelver
 # include <ctype.h> // a enlever
 # include <stdlib.h>
+# include <limits.h>
 
 int		ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t n);
@@ -49,4 +50,5 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
+int		ft_memcmp(const void *s1, const void *s2, size_t n);
 #endif

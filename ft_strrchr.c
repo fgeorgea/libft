@@ -6,7 +6,7 @@
 /*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 14:27:06 by fgeorgea          #+#    #+#             */
-/*   Updated: 2022/10/04 15:20:13 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2022/10/06 11:32:32 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,14 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	size_t	i;
+	int	i;
 
-	i = ft_strlen(s);
+	i = 0;
+	while (s[i])
+		i++;
 	if (i == 0)
 		return (NULL);
-	while (i > 0)
+	while (i >= 0)
 	{
 		if (s[i] == (char)c)
 			return ((char *)(s + i));
@@ -31,7 +33,7 @@ char	*ft_strrchr(const char *s, int c)
 /*
 int	main(void)
 {
-	printf("Vanilla: %s\n", strrchr("fefeflelelefe", 'f'));
-	printf("Mine: %s\n", ft_strrchr("fefeflelelefe", 'f'));
+	printf("Vanilla: %s\n", strrchr("salut les amis", 'l'));
+	printf("Mine:    %s\n", ft_strrchr("salut les amis", 'l'));
 }
 */

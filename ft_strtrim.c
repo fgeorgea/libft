@@ -6,7 +6,7 @@
 /*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 19:17:40 by fgeorgea          #+#    #+#             */
-/*   Updated: 2022/10/04 19:34:11 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2022/10/06 11:08:08 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,14 +26,14 @@ static int	ft_check_set(char c, char const *set)
 	return (0);
 }
 
-const char	*ft_set_begin(char const *s1, char const *set)
+static const char	*ft_set_begin(char const *s1, char const *set)
 {
 	while (*s1 && ft_check_set(*s1, set))
 		s1++;
 	return (s1);
 }
 
-int	ft_check_end(char const *s1, char const *set)
+static int	ft_check_end(char const *s1, char const *set)
 {
 	int	i;
 
