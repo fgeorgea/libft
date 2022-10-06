@@ -6,7 +6,7 @@
 #    By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/03 11:47:36 by fgeorgea          #+#    #+#              #
-#    Updated: 2022/10/05 17:54:10 by fgeorgea         ###   ########.fr        #
+#    Updated: 2022/10/06 09:33:31 by fgeorgea         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,7 +40,7 @@ SRCS = ft_atoi.c\
 	   ft_split.c\
 	ft_itoa.c\
 	ft_putchar_fd.c\
-	ft_pustr_fd.c\
+	ft_putstr_fd.c\
 	ft_putendl_fd.c\
 	ft_putnbr_fd.c\
 

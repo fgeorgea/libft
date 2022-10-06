@@ -6,7 +6,7 @@
 /*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 16:38:15 by fgeorgea          #+#    #+#             */
-/*   Updated: 2022/10/06 09:32:23 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2022/10/06 09:54:33 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,27 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	size_t	i;
-	if (!src && !dst)
+	int	i;
+
+	if (!dst && !src)
 		return (NULL);
-	i = len;
-	while (i > 0)
+	if (dst > src)
 	{
-		--i;
-		*(char *)(dst + i) = *(char *)(src + i);
+		i = (int)len - 1;
+		while (i >= 0)
+		{
+			*(char*)(dst + i) = *(char*)(src + i);
+			i--;
+		}
+	}
+	else
+	{
+		i = 0;
+		while (i < (int)len)
+		{
+			*(char*)(dst + i) = *(char*)(src + i);
+			i++;
+		}
 	}
 	return (dst);
 }
@@ -29,14 +42,10 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 /*
 int	main(void)
 {
-	char	dest[] = "hello aldj";
-	char	src[] = "felix";
+	char	str1[] = "hello felix";
+	char	str2[] = "hello felix";
 
-	char	dest2[] = "hello aldj";
-	char	src2[] = "felix";
-
-	printf("Vanilla: %s\n", memmove(&dest[4], src, 5));
-	printf("Result: %s\n", ft_memmove(&dest2[4], src2, 5));
-	printf("%d", dest > src);
+	printf("Vanilla: %s\n", memmove(str1, str1 + 2, 5));
+	printf("Result:  %s\n", ft_memmove(str2, str2 + 2, 5));
 }
 */

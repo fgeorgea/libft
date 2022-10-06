@@ -6,44 +6,33 @@
 /*   By: fgeorgea <fgeorgea@sutdent.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 17:54:35 by fgeorgea          #+#    #+#             */
-/*   Updated: 2022/10/05 18:02:59 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2022/10/06 09:39:17 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
-
 void	ft_putnbr_fd(int n, int fd)
 {
-	ft_putstr_fd(ft_itoa(n), fd);
-	/*if (nb == -2147483648)
+	long int	nb;
+
+	nb = n;
+	if (nb < 0)
 	{
-		//ft_putchar('-');
-		//ft_putchar('2');
-		//ft_putnbr(147483648);
-		ft_putchar_fd();
-	}
-	else if (nb < 0)
-	{
-		ft_putchar('-');
-		nb = -nb;
-		ft_putnbr(nb);
+		ft_putchar_fd('-', fd);
+		ft_putnbr_fd(-nb, fd);
 	}
 	else if (nb > 9)
 	{
-		ft_putnbr(nb / 10);
-		ft_putnbr(nb % 10);
+		ft_putnbr_fd(nb / 10, fd);
+		ft_putnbr_fd(nb % 10, fd);
 	}
 	else
-		ft_putchar(nb + 48);*/
+		ft_putchar_fd(nb + 48, fd);
 }
-
+/*
 int	main(void)
 {
 	int	number = -2147483647;
 	ft_putnbr_fd(number, 1);
-}
+}*/
