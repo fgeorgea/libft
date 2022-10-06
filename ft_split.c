@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fgeorgea <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 19:35:58 by fgeorgea          #+#    #+#             */
-/*   Updated: 2022/10/04 20:01:01 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2022/10/05 17:23:41 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ int	ft_strlen_sep(const char *str, char sep)
 	return (i);
 }
 
-const char	*ft_word(char const *str, char c)
+char	*ft_word(char const *str, char c)
 {
 	int		i;
 	int		len_word;
@@ -73,8 +73,8 @@ void	ft_free_all(char **strs)
 
 char	**ft_split(char const *s, char c)
 {
-	int			i;
-	const char	**res;
+	int	i;
+	char	**res;
 
 	i = 0;
 	res = NULL;

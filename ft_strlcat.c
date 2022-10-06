@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fgeorgea <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 18:50:46 by fgeorgea          #+#    #+#             */
-/*   Updated: 2022/10/04 19:02:11 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2022/10/05 17:22:43 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	dst[i] = '\0';
 	return (slen + dlen);
 }
-
+/*
 int	main(void)
 {
 	char	src[] = "Felix !";
@@ -49,4 +49,4 @@ int	main(void)
 	printf("Vanilla len:  %lu\nVanilla dest: %s\nVanilla src: %s\n", strlcat(dst, NULL, 0), dst,  src);
 	printf("My len:  %zu\nMy dst: %s\nMy src: %s\n", ft_strlcat(dst2, NULL, 0), dst2, src2);
 }
-
+*/
