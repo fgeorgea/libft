@@ -6,7 +6,7 @@
 /*   By: fgeorgea <fgeorgea@sutdent.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 16:43:07 by fgeorgea          #+#    #+#             */
-/*   Updated: 2022/10/06 12:29:24 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2022/10/06 13:44:16 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ static size_t	ft_intlen(long int n)
 		negative = 1;
 		n *= -1;
 	}
-	while (n > 10)
+	while (n >= 10)
 	{
 		n /= 10;
 		count++;
@@ -75,8 +75,9 @@ char	*ft_itoa(int n)
 /*
 int	main(void)
 {
-	int	n = 2147483647;
+	int	n = 1083913755;
 	printf("Int_len: %ld\n", ft_intlen(n));
 	printf("Final_str: %s\n", ft_itoa(n));
 	
-}*/
+}
+*/

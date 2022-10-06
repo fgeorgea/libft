@@ -6,7 +6,7 @@
 /*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 19:35:58 by fgeorgea          #+#    #+#             */
-/*   Updated: 2022/10/06 12:10:32 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2022/10/06 13:50:58 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,7 +98,7 @@ char	**ft_split(char const *s, char c)
 		while (*s && (c != *s))
 			s++;
 	}
-	res[i] = '\0';
+	res[i] = 0;
 	return ((char **)res);
 }
 

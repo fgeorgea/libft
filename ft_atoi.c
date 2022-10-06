@@ -6,7 +6,7 @@
 /*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 17:12:03 by fgeorgea          #+#    #+#             */
-/*   Updated: 2022/10/06 12:36:47 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2022/10/06 14:09:52 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,21 +19,32 @@ static int	ft_isspace(char c)
 	return (0);
 }
 
+unsigned long int ft_check_limits(int negative, unsigned long int count)
+{
+	if ((count > (unsigned)LONG_MAX) && negative == 0)
+		return (-1);
+	else if ((count > (unsigned)LONG_MAX) && negative == 1)
+		return (0);
+	if (negative)
+		return (-count);
+	return (count);
+}
+
 int	ft_atoi(const char *str)
 {
-	size_t			i;
-	int				negative;
-	long long int	count;
+	size_t				i;
+	int					negative;
+	unsigned long int	count;
 
 	i = 0;
-	negative = 1;
+	negative = 0;
 	count = 0;
 	while (ft_isspace(str[i]))
 		++i;
 	if (str[i] == '+' || str[i] == '-')
 	{
 		if (str[i] == '-')
-			negative *= -1;
+			negative = !negative;
 		++i;
 	}
 	while (str[i] >= '0' && str[i] <= '9')
@@ -42,17 +53,12 @@ int	ft_atoi(const char *str)
 		count += str[i] - 48;
 		++i;
 	}
-	if (count > LONG_MAX)
-		return (-1);
-	else if (count < LONG_MIN)
-		return (0);
-	return (count * negative);
+	return (ft_check_limits(negative, count));
 }
-
+/*
 int	main(void)
 {
-	char	str[] = "9223372036854775809";
+	char	str[] = "10";
 	printf("Vanilla: %d\n", atoi(str));
 	printf("Mine:    %d\n", ft_atoi(str));
-}
-
+}*/

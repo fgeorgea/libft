@@ -6,7 +6,7 @@
 /*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 14:43:40 by fgeorgea          #+#    #+#             */
-/*   Updated: 2022/10/06 10:05:12 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2022/10/06 13:50:38 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	unsigned char	*str2;
 
 	if (!s1 && !s2)
-		return (NULL);
+		return (0);
 	i = 0;
 	str1 = (unsigned char *)s1;
 	str2 = (unsigned char *)s2;
