@@ -6,15 +6,15 @@
 /*   By: fgeorgea <fgeorgea@sutdent.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 16:43:07 by fgeorgea          #+#    #+#             */
-/*   Updated: 2022/10/05 18:20:01 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2022/10/06 12:29:24 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_intlen(long int n)
+static size_t	ft_intlen(long int n)
 {
-	int	negative;
+	int		negative;
 	size_t	count;
 
 	negative = 0;
@@ -34,27 +34,20 @@ size_t	ft_intlen(long int n)
 	return (count);
 }
 
-char	*ft_itoa(int n)
+static	char	*ft_convert(char *str, long int nb, size_t len)
 {
-	int		i;
-	long int	nb;
-	size_t		len;
-	char		*str;
-	int		negative;
+	int	i;
+	int	negative;
 
-	nb = n;
-	len = ft_intlen(nb);
+	i = 0;
 	negative = 0;
-	str = malloc(sizeof(char) * (len + 1));
-	if (!str)
-		return (NULL);
 	if (nb < 0)
 	{
 		negative = 1;
 		nb *= -1;
 	}
 	i = len - 1;
-	str[i] = '\0';
+	str[len] = '\0';
 	while (i >= 0)
 	{
 		str[i] = (nb % 10) + '0';
@@ -65,10 +58,24 @@ char	*ft_itoa(int n)
 		str[0] = '-';
 	return (str);
 }
+
+char	*ft_itoa(int n)
+{
+	long int	nb;
+	size_t		len;
+	char		*str;
+
+	nb = n;
+	len = ft_intlen(nb);
+	str = malloc(sizeof(char) * (len + 1));
+	if (!str)
+		return (NULL);
+	return (ft_convert(str, nb, len));
+}
 /*
 int	main(void)
 {
-	int	n = -2147483648;
+	int	n = 2147483647;
 	printf("Int_len: %ld\n", ft_intlen(n));
 	printf("Final_str: %s\n", ft_itoa(n));
 	

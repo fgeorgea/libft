@@ -6,7 +6,7 @@
 /*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 18:50:46 by fgeorgea          #+#    #+#             */
-/*   Updated: 2022/10/06 11:46:55 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2022/10/06 12:33:53 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t	j;
 	size_t	slen;
 	size_t	dlen;
-	
+
 	i = 0;
 	j = 0;
 	slen = ft_strlen(src);
@@ -46,7 +46,13 @@ int	main(void)
 	char	src2[] = "Felix !";
 	char	*dst2 = NULL;
 	
-	printf("Vanilla: \nlen:  %lu\ndest: %s\nsrc: %s\n\n", strlcat(dst, src, 0), dst,  src);
-	printf("Result: \nlen:  %zu\ndst: %s\nsrc: %s\n", ft_strlcat(dst2, src2, 0), dst2, src2);
+	printf("Vanilla\n");
+	printf("len: %d\n", strlcat(dst, src, 0));
+	printf("dest %s\n", dst);
+	printf("src %s\n", src);
+	printf("Result: \n");
+	printf("len: %d\n", strlcat(dst2, src2, 0));
+	printf("dest %s\n", dst2);
+	printf("src %s\n", src2);
 }
 */

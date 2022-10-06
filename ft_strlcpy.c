@@ -6,7 +6,7 @@
 /*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 18:35:39 by fgeorgea          #+#    #+#             */
-/*   Updated: 2022/10/04 14:28:04 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2022/10/06 11:49:19 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,9 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	size_t	i;
 	size_t	j;
 
-	i = ft_strlen(src);
+	i = 0;
+	while (src[i])
+		++i;
 	j = 0;
 	if (i + 1 < dstsize)
 	{

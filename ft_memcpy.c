@@ -6,7 +6,7 @@
 /*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 13:54:13 by fgeorgea          #+#    #+#             */
-/*   Updated: 2022/10/04 14:48:58 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2022/10/06 12:35:38 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	size_t	i;
-	
+
 	if (!dst && !src)
-		return (NULL);	
+		return (NULL);
 	i = 0;
 	while (i < n)
 	{
