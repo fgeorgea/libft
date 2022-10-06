@@ -6,7 +6,7 @@
 #    By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/03 11:47:36 by fgeorgea          #+#    #+#              #
-#    Updated: 2022/10/06 15:04:45 by fgeorgea         ###   ########.fr        #
+#    Updated: 2022/10/06 16:31:26 by fgeorgea         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,7 +46,12 @@ SRCS = ft_atoi.c\
 	   ft_memcmp.c\
 	   ft_strmapi.c\
 
+SRCS_BONUS = ft_lstnew.c\
+			 ft_lstadd_front.c\
+
 OBJS = $(SRCS:.c=.o)
+
+OBJS_BONUS = $(SRCS_BONUS:.c=.o)
 
 CFLAGS = -Wall -Wextra -Werror
 
@@ -62,8 +67,11 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	@ar -rc $(NAME) $(OBJS)
 
+bonus: $(OBJS_BONUS)
+	@ar -rc $(NAME) $(OBJS_BONUS)
+
 clean: 
-	@$(RM) $(OBJS)
+	@$(RM) $(OBJS) $(OBJS_BONUS)
 
 fclean: clean
 	@$(RM) $(NAME)
