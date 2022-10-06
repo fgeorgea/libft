@@ -6,7 +6,7 @@
 /*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 18:50:46 by fgeorgea          #+#    #+#             */
-/*   Updated: 2022/10/05 17:22:43 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2022/10/06 11:46:55 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,13 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t	j;
 	size_t	slen;
 	size_t	dlen;
-
-	slen = ft_strlen(src);
-	dlen = ft_strlen(dst);
+	
 	i = 0;
 	j = 0;
-	if ((!dst || !src) && dstsize == 0)
-		return (0);
+	slen = ft_strlen(src);
+	if (!dst && dstsize == 0)
+		return (slen);
+	dlen = ft_strlen(dst);
 	if (dstsize < dlen)
 		return (dstsize + slen);
 	while (dst[i] && i < dstsize)
@@ -42,11 +42,11 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 int	main(void)
 {
 	char	src[] = "Felix !";
-	char	dst[16] = "Coucou ";
+	char	*dst = NULL;
 	char	src2[] = "Felix !";
-	char	dst2[16] = "Coucou ";
+	char	*dst2 = NULL;
 	
-	printf("Vanilla len:  %lu\nVanilla dest: %s\nVanilla src: %s\n", strlcat(dst, NULL, 0), dst,  src);
-	printf("My len:  %zu\nMy dst: %s\nMy src: %s\n", ft_strlcat(dst2, NULL, 0), dst2, src2);
+	printf("Vanilla: \nlen:  %lu\ndest: %s\nsrc: %s\n\n", strlcat(dst, src, 0), dst,  src);
+	printf("Result: \nlen:  %zu\ndst: %s\nsrc: %s\n", ft_strlcat(dst2, src2, 0), dst2, src2);
 }
 */
