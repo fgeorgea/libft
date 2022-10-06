@@ -1,32 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/04 16:34:14 by fgeorgea          #+#    #+#             */
-/*   Updated: 2022/10/06 14:49:42 by fgeorgea         ###   ########.fr       */
+/*   Created: 2022/10/06 14:51:39 by fgeorgea          #+#    #+#             */
+/*   Updated: 2022/10/06 15:06:07 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t count, size_t size)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	void	*res;
+	size_t	i;
+	int		len;
+	char	*str;
 
-	res = NULL;
-	res = malloc(count * size);
-	if (!res)
+	if (!s)
 		return (NULL);
-	bzero(res, count * size);
-	return (res);
+	i = 0;
+	len = ft_strlen(s);
+	str = malloc(sizeof(char) * (len + 1));
+	if (!str)
+		return (NULL);
+	while (s[i])
+	{
+		str[i] = (*f)(i, s[i]);
+		i++;
+	}
+	str[i] = '\0';
+	return (str);
 }
-/*
-int	main(void)
-{
-	printf("Vanilla:   %s\n", calloc(0, 0));
-	printf("My result: %s\n", ft_calloc(0, 0));
-}
-*/

@@ -6,7 +6,7 @@
 /*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 19:35:58 by fgeorgea          #+#    #+#             */
-/*   Updated: 2022/10/06 14:32:00 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2022/10/06 15:24:12 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ static int	ft_count_words(char const *str, char sep)
 	int	count;
 
 	count = 0;
-	if (!str)
-		return (-1);
 	while (*str)
 	{
 		while (*str && (*str == sep))
@@ -61,40 +59,44 @@ static char	*ft_word(char const *str, char c)
 	return (word);
 }
 
-static void	ft_free_all(char **strs)
+static char	**ft_convert(char **res, char const *s, char c)
 {
-	while (*strs)
-		free(strs++);
-	free(strs);
-}
-
-char	**ft_split(char const *s, char c)
-{
-	int		i;
-	char	**res;
+	size_t	i;
 
 	i = 0;
-	res = malloc(sizeof(char *) * (ft_count_words(s, c) + 1));
-	if (!res)
-		return (NULL);
 	while (*s)
 	{
 		while (*s && (c == *s))
 			s++;
 		if (*s)
 		{
-			res[i++] = ft_word(s, c);
-			if (!res[i - 1])
+			res[i] = ft_word(s, c);
+			if (!res[i])
 			{
-				ft_free_all(res);
+				while (*res)
+					free(res++);
+				free(res);
 				return (NULL);
 			}
+			i++;
 		}
 		while (*s && (c != *s))
 			s++;
 	}
 	res[i] = 0;
-	return ((char **)res);
+	return (res);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	char	**res;
+
+	if (!s)
+		return (NULL);
+	res = malloc(sizeof(char *) * (ft_count_words(s, c) + 1));
+	if (!res)
+		return (NULL);
+	return (ft_convert(res, s, c));
 }
 
 /*
