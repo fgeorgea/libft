@@ -6,7 +6,7 @@
 /*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 19:35:58 by fgeorgea          #+#    #+#             */
-/*   Updated: 2022/10/06 15:24:12 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2022/10/06 20:03:47 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ static char	*ft_word(char const *str, char c)
 
 	i = 0;
 	len_word = ft_strlen_sep(str, c);
-	word = (char *)malloc((sizeof(char) * (len_word)) + 1);
+	word = malloc((sizeof(char) * (len_word)) + 1);
 	if (!word)
 		return (NULL);
 	while (i < len_word)
@@ -59,7 +59,7 @@ static char	*ft_word(char const *str, char c)
 	return (word);
 }
 
-static char	**ft_convert(char **res, char const *s, char c)
+static char	**ft_insert_to_tab(char **res, char const *s, char c)
 {
 	size_t	i;
 
@@ -96,7 +96,7 @@ char	**ft_split(char const *s, char c)
 	res = malloc(sizeof(char *) * (ft_count_words(s, c) + 1));
 	if (!res)
 		return (NULL);
-	return (ft_convert(res, s, c));
+	return (ft_insert_to_tab(res, s, c));
 }
 
 /*

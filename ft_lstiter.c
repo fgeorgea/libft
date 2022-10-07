@@ -1,39 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/03 14:27:06 by fgeorgea          #+#    #+#             */
-/*   Updated: 2022/10/07 11:42:34 by fgeorgea         ###   ########.fr       */
+/*   Created: 2022/10/07 13:46:36 by fgeorgea          #+#    #+#             */
+/*   Updated: 2022/10/07 13:50:31 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	int	i;
-
-	i = 0;
-	while (s[i])
-		i++;
-	if (i == 0)
-		return (NULL);
-	while (i >= 0)
+	if (!lst || !f)
+		return ;
+	while (lst)
 	{
-		if (s[i] == (char)c)
-			return ((char *)(s + i));
-		i--;
+		(*f)(lst->content);
+		lst = lst->next;
 	}
-	return (NULL);
 }
-
-/*
-int	main(void)
-{
-	printf("Vanilla: %s\n", strrchr("salut lez amiz", 's'));
-	printf("Mine:    %s\n", ft_strrchr("salut lez amiz", 's'));
-}
-*/

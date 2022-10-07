@@ -6,7 +6,7 @@
 /*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 17:44:16 by fgeorgea          #+#    #+#             */
-/*   Updated: 2022/10/06 11:54:17 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2022/10/07 12:08:12 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ int	main(void)
 	char	haystack[] = "";
 	char	needle[] = "adf";
 
-	printf("Vanilla: %s\n", strnstr(haystack, needle, 10));
-	printf("My result: %s\n", ft_strnstr(haystack, needle, 10));
+	printf("Vanilla: %s\n", strnstr(NULL, needle, 10));
+	printf("My result: %s\n", ft_strnstr(NULL, needle, 10));
 }
 */

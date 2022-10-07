@@ -6,7 +6,7 @@
 #    By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/03 11:47:36 by fgeorgea          #+#    #+#              #
-#    Updated: 2022/10/06 18:08:14 by fgeorgea         ###   ########.fr        #
+#    Updated: 2022/10/07 13:47:16 by fgeorgea         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -53,8 +53,9 @@ SRCS_BONUS = ft_lstnew.c\
 			 ft_lstlast.c\
 			 ft_lstadd_back.c\
 			 ft_lstdelone.c\
+			 ft_lstclear.c\
+			 ft_lstiter.c\
 			 
-
 OBJS = $(SRCS:.c=.o)
 
 OBJS_BONUS = $(SRCS_BONUS:.c=.o)

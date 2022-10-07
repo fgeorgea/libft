@@ -6,7 +6,7 @@
 /*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 11:43:50 by fgeorgea          #+#    #+#             */
-/*   Updated: 2022/10/04 15:30:54 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2022/10/07 11:43:43 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 int	main(void)
 {
 	char	str[] = "felix est content";
-	printf("%s", ft_substr(str, 50, ));
+	printf("%s", ft_substr(str, 7, 3));
 }
 */
