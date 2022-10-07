@@ -6,7 +6,7 @@
 /*   By: fgeorgea <fgeorgea@sutdent.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 17:54:35 by fgeorgea          #+#    #+#             */
-/*   Updated: 2022/10/06 17:15:43 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2022/10/07 16:37:05 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,26 +14,27 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	unsigned int	nb;
-
-	nb = n;
-	if (nb < 0)
+	if (n == INT_MIN)
+	{
+		ft_putstr_fd("-2147483648", fd);
+	}
+	else if (n < 0)
 	{
 		ft_putchar_fd('-', fd);
-		nb = -n;
+		ft_putnbr_fd(-n, fd);
 	}
-	else if (nb > 9)
+	else if (n > 9)
 	{
-		ft_putnbr_fd((nb / 10), fd);
-		ft_putnbr_fd((nb % 10), fd);
+		ft_putnbr_fd((n / 10), fd);
+		ft_putnbr_fd((n % 10), fd);
 	}
 	else
-		ft_putchar_fd(nb + 48, fd);
+		ft_putchar_fd(n + 48, fd);
 }
 /*
 int	main(void)
 {
-	int	number = -2147483648;
-	ft_putnbr_fd(number, 2);
+	int	number = -10;
+	ft_putnbr_fd(number, 1);
 }
 */

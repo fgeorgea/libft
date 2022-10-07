@@ -6,7 +6,7 @@
 /*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 16:34:14 by fgeorgea          #+#    #+#             */
-/*   Updated: 2022/10/06 17:14:20 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2022/10/07 16:52:17 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,9 @@
 void	*ft_calloc(size_t count, size_t size)
 {
 	void	*res;
-
+	
+	if (count > 16711568 / size)
+		return (NULL);
 	res = NULL;
 	res = malloc(count * size);
 	if (!res)

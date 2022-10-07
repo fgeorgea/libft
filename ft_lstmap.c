@@ -1,33 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/03 14:27:06 by fgeorgea          #+#    #+#             */
-/*   Updated: 2022/10/07 14:50:45 by fgeorgea         ###   ########.fr       */
+/*   Created: 2022/10/07 15:19:48 by fgeorgea          #+#    #+#             */
+/*   Updated: 2022/10/07 15:52:09 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-char	*ft_strrchr(const char *s, int c)
-{
-	size_t	i;
-
-	i = ft_strlen(s);
-	while (i && s[i] != (char)c)
-		i--;
-	if (s[i] == (char)c)
-		return ((char *)(s + i));
-	return (NULL);
-}
-
 /*
-int	main(void)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	printf("Vanilla: %s\n", strrchr("salut les amiz", 's'));
-	printf("Mine:    %s\n", ft_strrchr("salut les amiz", 's'));
-}
-*/
+	
+}*/

@@ -6,7 +6,7 @@
 /*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 15:59:41 by fgeorgea          #+#    #+#             */
-/*   Updated: 2022/10/07 14:17:05 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2022/10/07 15:53:38 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ t_list	*ft_lstnew(void *content)
 {
 	t_list	*list;
 
-	if (!content)
+	if (!*content)
 		return (NULL);
 	list = malloc(sizeof(t_list));
 	if (!list)

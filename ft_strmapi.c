@@ -6,7 +6,7 @@
 /*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 14:51:39 by fgeorgea          #+#    #+#             */
-/*   Updated: 2022/10/06 15:06:07 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2022/10/07 16:20:06 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	int		len;
 	char	*str;
 
-	if (!s)
+	if (!s || !*f)
 		return (NULL);
 	i = 0;
 	len = ft_strlen(s);
