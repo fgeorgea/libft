@@ -6,7 +6,7 @@
 /*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 13:30:54 by fgeorgea          #+#    #+#             */
-/*   Updated: 2022/10/07 13:46:30 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2022/10/07 14:16:54 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,10 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 		return ;
 	while (*lst)
 	{
-			tmp = *lst;
-			*lst = (*lst)->next;
-			(*del)(tmp->content);
-			free(tmp);	
+		tmp = *lst;
+		*lst = (*lst)->next;
+		(*del)(tmp->content);
+		free(tmp);
 	}
 	free(*lst);
 }
