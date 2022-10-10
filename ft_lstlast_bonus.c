@@ -6,11 +6,11 @@
 /*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 17:38:07 by fgeorgea          #+#    #+#             */
-/*   Updated: 2022/10/06 17:41:10 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2022/10/10 15:42:29 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft_bonus.h"
 
 t_list	*ft_lstlast(t_list *lst)
 {

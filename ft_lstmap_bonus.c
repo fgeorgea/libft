@@ -1,34 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fgeorgea <fgeorgea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/04 16:34:14 by fgeorgea          #+#    #+#             */
-/*   Updated: 2022/10/10 11:59:10 by fgeorgea         ###   ########.fr       */
+/*   Created: 2022/10/07 15:19:48 by fgeorgea          #+#    #+#             */
+/*   Updated: 2022/10/10 16:11:46 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft_bonus.h"
 
-void	*ft_calloc(size_t count, size_t size)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	void	*res;
+	t_list	*new;
+	t_list	*new_lst;
 
-	if (count > 16711568 / size)
+	if (!lst || !f || !del)
 		return (NULL);
-	res = NULL;
-	res = malloc(count * size);
-	if (!res)
-		return (NULL);
-	bzero(res, count * size);
-	return (res);
+	new_lst = NULL;
+	while (lst)
+	{
+		new = ft_lstnew(f(lst->content));
+		new_lst = new;
+		if (!new)
+		{
+			ft_lstclear(&new_lst, del);
+			return (NULL);
+		}
+		ft_lstadd_back(&new_lst, new);
+		lst = lst->next;
+	}
+	return (new_lst);
 }
-/*
-int	main(void)
-{
-	printf("Vanilla:   %s\n", calloc(0, 0));
-	printf("My result: %s\n", ft_calloc(0, 0));
-}
-*/

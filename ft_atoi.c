@@ -6,7 +6,7 @@
 /*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 17:12:03 by fgeorgea          #+#    #+#             */
-/*   Updated: 2022/10/07 11:20:33 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2022/10/10 11:12:39 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ static int	ft_isspace(char c)
 
 unsigned long int	ft_check_limits(int negative, unsigned long int count)
 {
-	if ((count > (unsigned)LONG_MAX) && negative == 0)
+	if ((count > LONG_MAX) && negative == 0)
 		return (-1);
-	else if ((count > (unsigned)LONG_MAX) && negative == 1)
+	else if ((count - 1 > LONG_MAX) && negative == 1)
 		return (0);
 	if (negative)
 		return (-count);
@@ -32,33 +32,32 @@ unsigned long int	ft_check_limits(int negative, unsigned long int count)
 
 int	ft_atoi(const char *str)
 {
-	size_t				i;
 	int					negative;
 	unsigned long int	count;
 
-	i = 0;
 	negative = 0;
 	count = 0;
-	while (ft_isspace(str[i]))
-		++i;
-	if (str[i] == '+' || str[i] == '-')
+	while (ft_isspace(*str))
+		str++;
+	if (*str == '+' || *str == '-')
 	{
-		if (str[i] == '-')
+		if (*str == '-')
 			negative = !negative;
-		++i;
+		str++;
 	}
-	while (str[i] >= '0' && str[i] <= '9')
+	while (*str >= '0' && *str <= '9')
 	{
 		count *= 10;
-		count += str[i] - 48;
-		++i;
+		count += *str - 48;
+		str++;
 	}
 	return (ft_check_limits(negative, count));
 }
 /*
 int	main(void)
 {
-	char	str[] = "-2147483649999999999999";
+	char	str[] = "10";
 	printf("Vanilla: %d\n", atoi(str));
 	printf("Mine:    %d\n", ft_atoi(str));
-}*/
+}
+*/

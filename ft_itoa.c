@@ -6,7 +6,7 @@
 /*   By: fgeorgea <fgeorgea@sutdent.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 16:43:07 by fgeorgea          #+#    #+#             */
-/*   Updated: 2022/10/06 13:44:16 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2022/10/10 11:20:55 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ static size_t	ft_intlen(long int n)
 	return (count);
 }
 
-static	char	*ft_convert(char *str, long int nb, size_t len)
+static char	*ft_convert(char *str, long int nb, size_t len)
 {
 	int	i;
 	int	negative;

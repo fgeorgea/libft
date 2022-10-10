@@ -6,11 +6,9 @@
 /*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 13:08:38 by fgeorgea          #+#    #+#             */
-/*   Updated: 2022/10/04 11:15:46 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2022/10/10 11:06:46 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_isdigit(int c)
 {

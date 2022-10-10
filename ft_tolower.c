@@ -6,11 +6,9 @@
 /*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 14:05:41 by fgeorgea          #+#    #+#             */
-/*   Updated: 2022/10/04 13:20:11 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2022/10/10 11:09:18 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_tolower(int c)
 {
