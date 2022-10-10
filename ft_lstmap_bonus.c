@@ -6,7 +6,7 @@
 /*   By: fgeorgea <fgeorgea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 15:19:48 by fgeorgea          #+#    #+#             */
-/*   Updated: 2022/10/10 16:11:46 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2022/10/10 16:23:38 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	while (lst)
 	{
 		new = ft_lstnew(f(lst->content));
-		new_lst = new;
 		if (!new)
 		{
 			ft_lstclear(&new_lst, del);
