@@ -6,7 +6,7 @@
 #    By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/03 11:47:36 by fgeorgea          #+#    #+#              #
-#    Updated: 2022/10/11 12:55:03 by fgeorgea         ###   ########.fr        #
+#    Updated: 2022/10/11 16:57:49 by fgeorgea         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -75,8 +75,8 @@ all:		$(NAME)
 $(NAME): 	$(OBJS)
 	@ar -rc $(NAME) $(OBJS)
 
-bonus: 		$(OBJS_BONUS)
-	@ar -rc $(NAME) $(OBJS_BONUS)
+bonus: 		all $(OBJS_BONUS)
+	@ar -rc $(NAME) $(OBJS) $(OBJS_BONUS)
 
 clean: 
 	@$(RM) $(OBJS) $(OBJS_BONUS)

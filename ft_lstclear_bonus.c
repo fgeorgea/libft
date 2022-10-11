@@ -6,11 +6,11 @@
 /*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 13:30:54 by fgeorgea          #+#    #+#             */
-/*   Updated: 2022/10/11 12:57:32 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2022/10/11 16:59:06 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_bonus.h"
+#include "libft.h"
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
