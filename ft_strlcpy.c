@@ -6,7 +6,7 @@
 /*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 18:35:39 by fgeorgea          #+#    #+#             */
-/*   Updated: 2022/10/10 11:03:03 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2022/10/11 12:46:01 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,17 +40,3 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	}
 	return (i);
 }
-/*
-int	main(void)
-{
-	char	src[] = "felixxxx";
-	char	src2[] = "felixxxx";
-	char	dest[0];
-	char	dest2[0];
-
-	printf("Vanilla: %lu\n", strlcpy(dest, src, 0));
-	printf("Vanilla dst: %s\nVanilla src: %s\n", dest, src);
-	printf("My result: %zu\n", ft_strlcpy(dest2, src2, 0));
-	printf("My dst: %s\nMy src: %s\n", dest2, src2);
-}
-*/

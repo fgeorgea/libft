@@ -6,7 +6,7 @@
 /*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 16:38:15 by fgeorgea          #+#    #+#             */
-/*   Updated: 2022/10/10 11:02:32 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2022/10/11 12:45:49 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,13 +38,3 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 	return (dst);
 }
-/*
-int	main(void)
-{
-	char	str1[] = "hello felix";
-	char	str2[] = "hello felix";
-
-	printf("Vanilla: %s\n", memmove(str1, str1 + 2, 5));
-	printf("Result:  %s\n", ft_memmove(str2, str2 + 2, 5));
-}
-*/

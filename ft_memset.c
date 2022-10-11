@@ -6,7 +6,7 @@
 /*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 13:23:48 by fgeorgea          #+#    #+#             */
-/*   Updated: 2022/10/10 11:08:41 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2022/10/11 12:45:19 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,3 @@ void	*ft_memset(void *b, int c, size_t len)
 	}
 	return (b);
 }
-
-/*
-int	main(void)
-{
-	char str[50] = "felix";
-	printf("Vanilla: %s\n", memset(str, 48, 2));
-	printf("Mine: %s\n", ft_memset(str, 48, 2));
-}
-*/

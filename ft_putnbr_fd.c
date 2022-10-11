@@ -6,7 +6,7 @@
 /*   By: fgeorgea <fgeorgea@sutdent.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 17:54:35 by fgeorgea          #+#    #+#             */
-/*   Updated: 2022/10/10 11:24:32 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2022/10/11 12:50:46 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,3 @@ void	ft_putnbr_fd(int n, int fd)
 	else
 		ft_putchar_fd(n + 48, fd);
 }
-/*
-int	main(void)
-{
-	int	number = -10;
-	ft_putnbr_fd(number, 1);
-}
-*/

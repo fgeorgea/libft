@@ -6,7 +6,7 @@
 /*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 14:27:06 by fgeorgea          #+#    #+#             */
-/*   Updated: 2022/10/10 11:09:48 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2022/10/11 12:46:48 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,3 @@ char	*ft_strrchr(const char *s, int c)
 		return ((char *)(s + i));
 	return (NULL);
 }
-
-/*
-int	main(void)
-{
-	printf("Vanilla: %s\n", strrchr("salut les amiz", 's'));
-	printf("Mine:    %s\n", ft_strrchr("salut les amiz", 's'));
-}
-*/

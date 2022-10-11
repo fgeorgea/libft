@@ -6,7 +6,7 @@
 /*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 17:12:03 by fgeorgea          #+#    #+#             */
-/*   Updated: 2022/10/10 11:12:39 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2022/10/11 12:47:53 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,13 @@ static int	ft_isspace(char c)
 	return (0);
 }
 
-unsigned long int	ft_check_limits(int negative, unsigned long int count)
+static unsigned long int	ft_limits(int neg, unsigned long int count)
 {
-	if ((count > LONG_MAX) && negative == 0)
+	if ((count > LONG_MAX) && neg == 0)
 		return (-1);
-	else if ((count - 1 > LONG_MAX) && negative == 1)
+	else if ((count - 1 > LONG_MAX) && neg == 1)
 		return (0);
-	if (negative)
+	if (neg)
 		return (-count);
 	return (count);
 }
@@ -51,13 +51,5 @@ int	ft_atoi(const char *str)
 		count += *str - 48;
 		str++;
 	}
-	return (ft_check_limits(negative, count));
+	return (ft_limits(negative, count));
 }
-/*
-int	main(void)
-{
-	char	str[] = "10";
-	printf("Vanilla: %d\n", atoi(str));
-	printf("Mine:    %d\n", ft_atoi(str));
-}
-*/

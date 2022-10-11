@@ -6,7 +6,7 @@
 /*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 19:17:40 by fgeorgea          #+#    #+#             */
-/*   Updated: 2022/10/10 11:17:47 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2022/10/11 12:48:57 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,11 +67,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	res[i] = 0;
 	return (res);
 }
-/*
-int    main(void)
-{
-    char const    str[] = "felix felix coucou felix";
-    char const    set[] = "felix";
-    printf("%s\n", ft_strtrim(str, set));
-}
-*/

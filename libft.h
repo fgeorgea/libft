@@ -6,7 +6,7 @@
 /*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 13:09:01 by fgeorgea          #+#    #+#             */
-/*   Updated: 2022/10/10 16:20:13 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2022/10/11 13:01:54 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,10 @@
 # define LIBFT_H
 
 # include <unistd.h>
-# include <string.h> // a enlever
-# include <stdio.h> // a enelver
-# include <ctype.h> // a enlever
 # include <stdlib.h>
 # include <limits.h>
 
+/* *** MANDATORY *** */
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);
@@ -55,7 +53,7 @@ void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 
-
+/* *** BONUS *** */
 typedef struct s_list
 {
 	void			*content;

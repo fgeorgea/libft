@@ -6,7 +6,7 @@
 /*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 19:35:58 by fgeorgea          #+#    #+#             */
-/*   Updated: 2022/10/10 11:19:19 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2022/10/11 12:49:15 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,19 +98,3 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	return (ft_insert_to_tab(res, s, c));
 }
-
-/*
-#include <stdio.h>
-int	main(void)
-{
-	int		index;
-	char	**split;
-	split = ft_split("Felix est mecontent car il a pas fini le split", ' ');
-	index = 0;
-	while (split[index])
-	{
-		printf("%s\n", split[index]);
-		index++;
-	}
-}
-*/

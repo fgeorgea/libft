@@ -6,7 +6,7 @@
 /*   By: fgeorgea <fgeorgea@sutdent.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 17:37:45 by fgeorgea          #+#    #+#             */
-/*   Updated: 2022/10/10 11:24:08 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2022/10/11 12:49:55 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,3 @@ void	ft_putchar_fd(char c, int fd)
 {
 	write(fd, &c, 1);
 }
-/*
-int	main(void)
-{
-	ft_putchar_fd('c', 1);
-}
-*/

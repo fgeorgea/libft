@@ -6,7 +6,7 @@
 /*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 18:50:46 by fgeorgea          #+#    #+#             */
-/*   Updated: 2022/10/10 11:04:23 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2022/10/11 12:46:11 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,21 +38,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	dst[i] = '\0';
 	return (slen + dlen);
 }
-/*
-int	main(void)
-{
-	char	src[] = "Felix !";
-	char	*dst = NULL;
-	char	src2[] = "Felix !";
-	char	*dst2 = NULL;
-	
-	printf("Vanilla\n");
-	printf("len: %d\n", strlcat(dst, src, 0));
-	printf("dest %s\n", dst);
-	printf("src %s\n", src);
-	printf("Result: \n");
-	printf("len: %d\n", strlcat(dst2, src2, 0));
-	printf("dest %s\n", dst2);
-	printf("src %s\n", src2);
-}
-*/

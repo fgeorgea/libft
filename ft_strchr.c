@@ -6,7 +6,7 @@
 /*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 14:08:03 by fgeorgea          #+#    #+#             */
-/*   Updated: 2022/10/10 11:15:03 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2022/10/11 12:46:37 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,3 @@ char	*ft_strchr(const char *s, int c)
 		return ((char *)(s));
 	return (NULL);
 }
-/*
-int	main(void)
-{
-	printf("Mine: %s\n", ft_strchr("tripouille", 't' + 256));
-	printf("Vanilla: %s\n", strchr("tripouille", 't' + 256));
-}
-*/

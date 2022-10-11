@@ -6,7 +6,7 @@
 /*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 12:07:46 by fgeorgea          #+#    #+#             */
-/*   Updated: 2022/10/10 11:13:04 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2022/10/11 12:48:20 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,17 +32,3 @@ char	*ft_strdup(const char *s1)
 	str[i] = '\0';
 	return (str);
 }
-/*
-int		main(void)
-{
-	char	*str;
-	char	*allocated;
-
-	str = "Hello World with malloc()";
-	printf("original  : base  : $%s$\n", str);
-	allocated = strdup(str);
-	printf("copied    : alloc : $%s$\n", allocated);
-	allocated = ft_strdup(str);
-	printf("ft_copied : alloc : $%s$\n", allocated);
-}
-*/

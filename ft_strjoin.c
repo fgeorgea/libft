@@ -6,7 +6,7 @@
 /*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 13:50:59 by fgeorgea          #+#    #+#             */
-/*   Updated: 2022/10/10 11:16:20 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2022/10/11 12:48:42 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,12 +37,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	str[i] = '\0';
 	return (str);
 }
-/*
-int	main(void)
-{
-	char	s1[] = "coucou ";
-	char	s2[] = "Felix !";
-
-	printf("Result: %s\n", ft_strjoin(s1, s2));
-}
-*/

@@ -6,7 +6,7 @@
 /*   By: fgeorgea <fgeorgea@sutdent.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 16:43:07 by fgeorgea          #+#    #+#             */
-/*   Updated: 2022/10/10 11:20:55 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2022/10/11 12:49:27 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,12 +72,3 @@ char	*ft_itoa(int n)
 		return (NULL);
 	return (ft_convert(str, nb, len));
 }
-/*
-int	main(void)
-{
-	int	n = 1083913755;
-	printf("Int_len: %ld\n", ft_intlen(n));
-	printf("Final_str: %s\n", ft_itoa(n));
-	
-}
-*/

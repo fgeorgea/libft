@@ -6,7 +6,7 @@
 /*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 17:16:01 by fgeorgea          #+#    #+#             */
-/*   Updated: 2022/10/10 11:23:41 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2022/10/11 12:49:45 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,16 +26,3 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 		s++;
 	}
 }
-/*
-void	f(unsigned int i, char *c)
-{
-	*c += i;
-}
-
-int	main(void)
-{
-	char	str[] = "felix coucou";
-
-	ft_striteri(str, &f);
-	printf("%s", str);
-}*/
