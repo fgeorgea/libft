@@ -6,7 +6,7 @@
 /*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 16:38:15 by fgeorgea          #+#    #+#             */
-/*   Updated: 2022/10/11 12:45:49 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2022/10/12 18:33:28 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	int	i;
 
-	if (!dst && !src)
+	if (!dst || !src)
 		return (NULL);
 	if (src < dst)
 	{

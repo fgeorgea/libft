@@ -6,7 +6,7 @@
 /*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 17:44:16 by fgeorgea          #+#    #+#             */
-/*   Updated: 2022/10/11 12:47:43 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2022/10/12 18:58:30 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	size_t	i;
 	size_t	j;
 
-	if (needle[0] == '\0')
+	if (!needle || ft_strlen(needle) == 0)
 		return ((char *)haystack);
-	if (!haystack && len == 0)
+	if (!haystack)
 		return (NULL);
 	i = 0;
 	while (haystack[i] && i < len)

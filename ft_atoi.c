@@ -6,7 +6,7 @@
 /*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 17:12:03 by fgeorgea          #+#    #+#             */
-/*   Updated: 2022/10/11 12:47:53 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2022/10/12 18:38:24 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,8 @@ int	ft_atoi(const char *str)
 
 	negative = 0;
 	count = 0;
+	if (!str)
+		return (0);
 	while (ft_isspace(*str))
 		str++;
 	if (*str == '+' || *str == '-')

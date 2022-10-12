@@ -6,7 +6,7 @@
 /*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 17:09:26 by fgeorgea          #+#    #+#             */
-/*   Updated: 2022/10/11 12:47:05 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2022/10/12 18:37:05 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	unsigned char	chr;
 
 	i = 0;
+	if (!s)
+		return (NULL);
 	chr = (unsigned char)c;
 	str = (unsigned char *)s;
 	while (i < n)

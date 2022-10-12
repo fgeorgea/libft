@@ -6,7 +6,7 @@
 /*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 12:07:46 by fgeorgea          #+#    #+#             */
-/*   Updated: 2022/10/11 12:48:20 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2022/10/12 18:38:58 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@ char	*ft_strdup(const char *s1)
 	int		len;
 
 	i = 0;
-	str = NULL;
+	if (!s1)
+		return (NULL);
 	len = ft_strlen(s1);
 	str = malloc((sizeof(*str) * len) + 1);
 	if (str == NULL)

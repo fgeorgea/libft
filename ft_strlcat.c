@@ -6,7 +6,7 @@
 /*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 18:50:46 by fgeorgea          #+#    #+#             */
-/*   Updated: 2022/10/11 17:30:00 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2022/10/12 18:35:48 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 
 	i = 0;
 	j = 0;
+	if (!dst || !src)
+		return (0);
 	slen = ft_strlen(src);
 	if (!dst && dstsize == 0)
 		return (slen);

@@ -6,7 +6,7 @@
 /*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 13:30:54 by fgeorgea          #+#    #+#             */
-/*   Updated: 2022/10/12 18:15:00 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2022/10/12 18:31:00 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,4 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 		(*del)(tmp->content);
 		free(tmp);
 	}
-	free(*lst);
 }
