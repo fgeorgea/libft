@@ -6,7 +6,7 @@
 #    By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/03 11:47:36 by fgeorgea          #+#    #+#              #
-#    Updated: 2022/10/12 09:54:59 by fgeorgea         ###   ########.fr        #
+#    Updated: 2022/10/12 18:14:29 by fgeorgea         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,15 +47,15 @@ SRCS		=	ft_atoi.c\
 	   			ft_strmapi.c\
 	   			ft_striteri.c\
 	   
-SRCS_BONUS 	= 	ft_lstnew_bonus.c\
-				ft_lstadd_front_bonus.c\
-				ft_lstsize_bonus.c\
-				ft_lstlast_bonus.c\
-				ft_lstadd_back_bonus.c\
-				ft_lstdelone_bonus.c\
-				ft_lstclear_bonus.c\
-				ft_lstiter_bonus.c\
-				ft_lstmap_bonus.c\
+SRCS_BONUS 	= 	ft_lstnew.c\
+				ft_lstadd_front.c\
+				ft_lstsize.c\
+				ft_lstlast.c\
+				ft_lstadd_back.c\
+				ft_lstdelone.c\
+				ft_lstclear.c\
+				ft_lstiter.c\
+				ft_lstmap.c\
 
 OBJS		 = 	$(SRCS:.c=.o)
 
@@ -63,9 +63,9 @@ OBJS_BONUS	 =	$(SRCS_BONUS:.c=.o)
 
 CFLAGS		 =	-Wall -Wextra -Werror
 
-CC			 =	gcc
+CC			 =	@gcc
 
-RM			 =	rm -f
+RM			 =	@rm -f
 
 .c.o:
 	$(CC) $(FLAGS) -c $< -o $(<:.c=.o)
@@ -73,10 +73,10 @@ RM			 =	rm -f
 all:		$(NAME)
 
 $(NAME): 	$(OBJS)
-	ar -rc $(NAME) $(OBJS)
+	@ar -rcs $(NAME) $(OBJS)
 
 bonus: 		$(NAME) $(OBJS_BONUS)
-	ar -rc $(NAME) $(OBJS_BONUS)
+	@ar -rcs $(NAME) $(OBJS_BONUS)
 
 clean: 
 	$(RM) $(OBJS) $(OBJS_BONUS)
