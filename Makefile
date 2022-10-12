@@ -6,7 +6,7 @@
 #    By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/03 11:47:36 by fgeorgea          #+#    #+#              #
-#    Updated: 2022/10/11 16:57:49 by fgeorgea         ###   ########.fr        #
+#    Updated: 2022/10/12 09:54:59 by fgeorgea         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -68,21 +68,21 @@ CC			 =	gcc
 RM			 =	rm -f
 
 .c.o:
-	@$(CC) $(FLAGS) -c $< -o $(<:.c=.o)
+	$(CC) $(FLAGS) -c $< -o $(<:.c=.o)
 
 all:		$(NAME)
 
 $(NAME): 	$(OBJS)
-	@ar -rc $(NAME) $(OBJS)
+	ar -rc $(NAME) $(OBJS)
 
-bonus: 		all $(OBJS_BONUS)
-	@ar -rc $(NAME) $(OBJS) $(OBJS_BONUS)
+bonus: 		$(NAME) $(OBJS_BONUS)
+	ar -rc $(NAME) $(OBJS_BONUS)
 
 clean: 
-	@$(RM) $(OBJS) $(OBJS_BONUS)
+	$(RM) $(OBJS) $(OBJS_BONUS)
 
 fclean: 	clean
-	@$(RM) $(NAME)
+	$(RM) $(NAME)
 
 re: 		fclean all
 
