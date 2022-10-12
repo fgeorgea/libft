@@ -6,7 +6,7 @@
 /*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 19:35:58 by fgeorgea          #+#    #+#             */
-/*   Updated: 2022/10/11 12:49:15 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2022/10/12 19:13:49 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,11 +90,14 @@ static char	**ft_insert_to_tab(char **res, char const *s, char c)
 char	**ft_split(char const *s, char c)
 {
 	char	**res;
+	int		word_count;
 
 	if (!s)
 		return (NULL);
-	res = malloc(sizeof(char *) * (ft_count_words(s, c) + 1));
+	word_count = ft_count_words(s, c);
+	res = malloc(sizeof(char *) * (word_count + 1));
 	if (!res)
 		return (NULL);
-	return (ft_insert_to_tab(res, s, c));
+	res = ft_insert_to_tab(res, s, c);
+	return (res);
 }
