@@ -6,7 +6,7 @@
 #    By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/03 11:47:36 by fgeorgea          #+#    #+#              #
-#    Updated: 2022/10/12 19:08:26 by fgeorgea         ###   ########.fr        #
+#    Updated: 2022/10/13 12:38:51 by fgeorgea         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,6 +39,10 @@ SRCS		=	ft_atoi.c\
 	   			ft_strtrim.c\
 	   			ft_split.c\
 	   			ft_itoa.c\
+				ft_putchar.c\
+				ft_putstr.c\
+				ft_putendl.c\
+				ft_putnbr.c\
    	   			ft_putchar_fd.c\
    	   			ft_putstr_fd.c\
    	   			ft_putendl_fd.c\
@@ -46,8 +50,7 @@ SRCS		=	ft_atoi.c\
 	   			ft_memcmp.c\
 	   			ft_strmapi.c\
 	   			ft_striteri.c\
-	   
-SRCS_BONUS 	= 	ft_lstnew.c\
+				ft_lstnew.c\
 				ft_lstadd_front.c\
 				ft_lstsize.c\
 				ft_lstlast.c\
@@ -58,8 +61,6 @@ SRCS_BONUS 	= 	ft_lstnew.c\
 				ft_lstmap.c\
 
 OBJS		 = 	$(SRCS:.c=.o)
-
-OBJS_BONUS	 =	$(SRCS_BONUS:.c=.o)
 
 CFLAGS		 =	-Wall -Wextra -Werror
 
@@ -75,15 +76,12 @@ all:		$(NAME)
 $(NAME): 	$(OBJS)
 	@ar -rcs $(NAME) $(OBJS)
 
-bonus: 		$(NAME) $(OBJS_BONUS)
-	@ar -rcs $(NAME) $(OBJS_BONUS)
-
 clean: 
-	$(RM) $(OBJS) $(OBJS_BONUS)
+	$(RM) $(OBJS)
 
 fclean: 	clean
 	$(RM) $(NAME)
 
 re: 		fclean all
 
-.PHONY: 	all re clean fclean bonus
+.PHONY: 	all re clean fclean
