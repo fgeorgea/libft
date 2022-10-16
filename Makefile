@@ -6,7 +6,7 @@
 #    By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/03 11:47:36 by fgeorgea          #+#    #+#              #
-#    Updated: 2022/10/13 21:21:48 by fgeorgea         ###   ########.fr        #
+#    Updated: 2022/10/16 23:09:01 by fgeorgea         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -76,12 +76,15 @@ all:		$(NAME)
 
 $(NAME): 	$(OBJS)
 	@ar -rcs $(NAME) $(OBJS)
+	@echo "\033[92m# Created $(NAME) OK ! #\033[0m"
 
 clean: 
 	$(RM) $(OBJS)
+	@echo "\033[92m# Removed objects #\033[0m"
 
 fclean: 	clean
 	$(RM) $(NAME)
+	@echo "\033[92m# Removed $(NAME) #\033[0m"
 
 re: 		fclean all
 
