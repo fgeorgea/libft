@@ -6,7 +6,7 @@
 /*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 13:20:41 by fgeorgea          #+#    #+#             */
-/*   Updated: 2022/10/12 18:21:48 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2022/10/17 23:18:24 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 size_t	ft_strlen(const char *s)
 {
-	size_t	i;
+	const char	*tmp;
 
-	i = 0;
 	if (!s)
 		return (0);
-	while (s[i])
-		++i;
-	return (i);
+	tmp = s;
+	while (*s)
+		s++;
+	return (s - tmp);
 }
