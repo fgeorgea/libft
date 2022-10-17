@@ -6,7 +6,7 @@
 /*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 17:12:03 by fgeorgea          #+#    #+#             */
-/*   Updated: 2022/10/12 18:38:24 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2022/10/17 10:34:17 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,39 +19,42 @@ static int	ft_isspace(char c)
 	return (0);
 }
 
-static unsigned long int	ft_limits(int neg, unsigned long int count)
+const char	*ft_getsign(const char *str, int *is_neg)
 {
-	if ((count > LONG_MAX) && neg == 0)
-		return (-1);
-	else if ((count - 1 > LONG_MAX) && neg == 1)
-		return (0);
-	if (neg)
-		return (-count);
-	return (count);
+	if (*str == '-' || *str == '+')
+	{
+		if (*str == '-')
+			*is_neg *= -1;
+		str++;
+	}
+	return (str);
 }
 
 int	ft_atoi(const char *str)
 {
-	int					negative;
-	unsigned long int	count;
+	int			is_neg;
+	long int	nbr;
+	long int	tmp;
 
-	negative = 0;
-	count = 0;
+	is_neg = 1;
 	if (!str)
 		return (0);
+	is_neg = 1;
+	nbr = 0;
+	tmp = 0;
 	while (ft_isspace(*str))
 		str++;
-	if (*str == '+' || *str == '-')
-	{
-		if (*str == '-')
-			negative = !negative;
-		str++;
-	}
+	str = ft_getsign(str, &is_neg);
 	while (*str >= '0' && *str <= '9')
 	{
-		count *= 10;
-		count += *str - 48;
+		nbr *= 10;
+		nbr += *str - 48;
+		if (nbr < tmp && is_neg == 1)
+			return (-1);
+		if (nbr < tmp && is_neg == -1)
+			return (0);
+		tmp = nbr;
 		str++;
 	}
-	return (ft_limits(negative, count));
+	return ((int)(nbr * is_neg));
 }
