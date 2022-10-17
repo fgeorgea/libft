@@ -6,69 +6,54 @@
 /*   By: fgeorgea <fgeorgea@sutdent.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 16:43:07 by fgeorgea          #+#    #+#             */
-/*   Updated: 2022/10/12 19:09:08 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2022/10/18 00:41:28 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	ft_intlen(long int n)
+static size_t	ft_intlen(long int n, int *is_neg)
 {
-	int		negative;
-	size_t	count;
+	size_t	len;
 
-	negative = 0;
-	count = 1;
+	*is_neg = 0;
+	len = 1;
 	if (n < 0)
 	{
-		negative = 1;
+		*is_neg = 1;
 		n *= -1;
 	}
 	while (n >= 10)
 	{
 		n /= 10;
-		count++;
+		len++;
 	}
-	if (negative)
-		return (count + 1);
-	return (count);
-}
-
-static char	*ft_convert(char *str, long int nb, size_t len)
-{
-	int	i;
-	int	negative;
-
-	i = 0;
-	negative = 0;
-	if (nb < 0)
-	{
-		negative = 1;
-		nb *= -1;
-	}
-	i = len - 1;
-	str[len] = '\0';
-	while (i >= 0)
-	{
-		str[i] = (nb % 10) + '0';
-		nb /= 10;
-		--i;
-	}
-	if (negative)
-		str[0] = '-';
-	return (str);
+	return (len + *is_neg);
 }
 
 char	*ft_itoa(int n)
 {
 	long int	nb;
-	size_t		len;
+	int			len;
+	int			is_neg;
 	char		*str;
 
 	nb = n;
-	len = ft_intlen(nb);
+	len = ft_intlen(nb, &is_neg);
 	str = malloc(sizeof(char) * (len + 1));
 	if (!str)
 		return (NULL);
-	return (ft_convert(str, nb, len));
+	str[len] = '\0';
+	len--;
+	if (nb < 0)
+		nb *= -1;
+	while (len >= 0)
+	{
+		str[len] = (nb % 10) + '0';
+		nb /= 10;
+		--len;
+	}
+	if (is_neg)
+		str[0] = '-';
+	return (str);
 }
