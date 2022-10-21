@@ -6,7 +6,7 @@
 #    By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/03 11:47:36 by fgeorgea          #+#    #+#              #
-#    Updated: 2022/10/16 23:09:01 by fgeorgea         ###   ########.fr        #
+#    Updated: 2022/10/21 19:45:08 by fgeorgea         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,6 +25,7 @@ SRCS		=	ft_atoi.c \
 				ft_strrchr.c \
 				ft_strnstr.c \
 				ft_strlen.c \
+				ft_nbrlen.c \
 				ft_strlcpy.c \
 				ft_strlcat.c \
 				ft_strdup.c \
@@ -60,6 +61,9 @@ SRCS		=	ft_atoi.c \
 				ft_lstclear.c \
 				ft_lstiter.c \
 				ft_lstmap.c \
+				ft_printf.c \
+				ft_printf_utils.c \
+				ft_printnbr.c \
 
 OBJS		 = 	$(SRCS:.c=.o)
 
@@ -69,6 +73,11 @@ CC			 =	@gcc
 
 RM			 =	@rm -f
 
+DEF_COLOR	=	\033[0;39m
+RED			=	\033[0;91m
+GREEN		=	\033[0;92m
+BLUE		=	\033[0;94m
+
 .c.o:
 	$(CC) $(FLAGS) -c $< -o $(<:.c=.o)
 
@@ -76,16 +85,20 @@ all:		$(NAME)
 
 $(NAME): 	$(OBJS)
 	@ar -rcs $(NAME) $(OBJS)
-	@echo "\033[92m# Created $(NAME) OK ! #\033[0m"
+	@echo "$(GREEN)# Created $(NAME) OK ! #$(DEF_COLOR)"
 
 clean: 
 	$(RM) $(OBJS)
-	@echo "\033[92m# Removed objects #\033[0m"
+	@echo "$(RED)# Removed objects #$(DEF_COLOR)"
 
 fclean: 	clean
 	$(RM) $(NAME)
-	@echo "\033[92m# Removed $(NAME) #\033[0m"
+	@echo "$(RED)# Removed $(NAME) #$(DEF_COLOR)"
 
 re: 		fclean all
 
-.PHONY: 	all re clean fclean
+norm:
+	@echo "$(BLUE)Check norme$(DEF_COLOR)"
+	@norminette -R CheckDefine
+
+.PHONY: 	all re clean fclean norm
