@@ -6,7 +6,7 @@
 /*   By: fgeorgea <fgeorgea@sutdent.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 17:46:51 by fgeorgea          #+#    #+#             */
-/*   Updated: 2022/10/11 12:50:11 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2022/10/21 23:14:40 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	if (!s)
+	if (!s || fd < 0)
 		return ;
 	write(fd, s, ft_strlen(s));
 }

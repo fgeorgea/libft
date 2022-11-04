@@ -6,7 +6,7 @@
 /*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 12:30:04 by fgeorgea          #+#    #+#             */
-/*   Updated: 2022/10/13 12:31:36 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2022/11/04 15:14:57 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,19 @@
 
 void	ft_putnbr(int n)
 {
-	if (n == INT_MIN)
-	{
-		ft_putstr("-2147483648");
-	}
-	else if (n < 0)
+	long int	nbr;
+
+	nbr = n;
+	if (nbr < 0)
 	{
 		ft_putchar('-');
-		ft_putnbr(-n);
+		nbr *= -1;
 	}
-	else if (n > 9)
+	if (nbr > 9)
 	{
-		ft_putnbr(n / 10);
-		ft_putnbr(n % 10);
+		ft_putnbr(nbr / 10);
+		ft_putnbr(nbr % 10);
 	}
 	else
-		ft_putchar(n + 48);
+		ft_putchar(nbr + 48);
 }
