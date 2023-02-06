@@ -6,7 +6,7 @@
 /*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 13:09:01 by fgeorgea          #+#    #+#             */
-/*   Updated: 2022/11/04 15:13:21 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2023/02/06 14:28:43 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,4 +79,19 @@ size_t	ft_printnbr(long int nb);
 void	ft_printhex(unsigned int nbr, char *base, size_t *len);
 size_t	ft_nbrlen(long int nb);
 size_t	ft_printptr(unsigned long int nb);
+char	*ft_strjoin_gnl(char *s1, char *s2, int *check_nl);
+char	*get_next_line(int fd);
+char	*ft_strdup_gnl(char *s1, int *check_nl);
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 3
+# endif
+# if BUFFER_SIZE > 10000
+#  undef BUFFER_SIZE
+#  define BUFFER_SIZE 10000
+# elif BUFFER_SIZE < 1
+#  undef BUFFER_SIZE
+#  define BUFFER_SIZE 10000
+# endif
+
 #endif

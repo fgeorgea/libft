@@ -6,7 +6,7 @@
 #    By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/03 11:47:36 by fgeorgea          #+#    #+#              #
-#    Updated: 2022/10/21 19:45:08 by fgeorgea         ###   ########.fr        #
+#    Updated: 2023/02/06 14:28:08 by fgeorgea         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -64,6 +64,8 @@ SRCS		=	ft_atoi.c \
 				ft_printf.c \
 				ft_printf_utils.c \
 				ft_printnbr.c \
+				get_next_line.c \
+				get_next_line_utils.c \
 
 OBJS		 = 	$(SRCS:.c=.o)
 
