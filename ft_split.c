@@ -6,7 +6,7 @@
 /*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 19:35:58 by fgeorgea          #+#    #+#             */
-/*   Updated: 2022/10/17 10:16:34 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2023/05/05 13:35:33 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,19 @@ static char	*ft_word(char const *str, char c)
 	return (word);
 }
 
+static void	free_array(char **array, int pos)
+{
+	int	i;
+
+	i = 0;
+	while (i < pos)
+	{
+		free(array[i]);
+		i++;
+	}
+	free(array);
+}
+
 static char	**ft_insert_to_tab(char **tab, char const *s, char c)
 {
 	size_t	i;
@@ -66,9 +79,7 @@ static char	**ft_insert_to_tab(char **tab, char const *s, char c)
 			tab[i] = ft_word(s, c);
 			if (!tab[i])
 			{
-				while (*tab)
-					free(tab++);
-				free(tab);
+				free_array(tab, i);
 				return (NULL);
 			}
 			i++;
