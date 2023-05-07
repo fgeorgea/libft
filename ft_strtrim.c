@@ -6,7 +6,7 @@
 /*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 19:17:40 by fgeorgea          #+#    #+#             */
-/*   Updated: 2022/10/12 19:08:59 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2023/05/07 18:13:07 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,10 @@ char	*ft_strtrim(char const *s1, char const *set)
 	i = 0;
 	s1 = ft_set_begin(s1, set);
 	end = ft_check_end(s1, set) + 1;
-	res = malloc(sizeof(char) * (end + 1));
+	if (end == 1)
+		res = malloc(sizeof(char) * 1);
+	else
+		res = malloc(sizeof(char) * (end + 1));
 	if (!res)
 		return (NULL);
 	while (i < end)
@@ -64,6 +67,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 		res[i] = s1[i];
 		i++;
 	}
-	res[i] = 0;
+	res[i] = '\0';
 	return (res);
 }
