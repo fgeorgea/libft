@@ -6,7 +6,7 @@
 /*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/21 19:31:32 by fgeorgea          #+#    #+#             */
-/*   Updated: 2022/10/21 19:31:53 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2023/05/07 19:11:48 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,8 @@ int	ft_printf(const char *str, ...)
 	int			i;
 	va_list		ap;
 
+	if (!str)
+		return (-1);
 	len = 0;
 	i = 0;
 	va_start(ap, str);
