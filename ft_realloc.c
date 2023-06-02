@@ -6,7 +6,7 @@
 /*   By: fgeorgea <fgeorgea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/02 18:34:40 by fgeorgea          #+#    #+#             */
-/*   Updated: 2023/06/02 18:46:04 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2023/06/02 18:48:15 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ void	*ft_realloc(void *ptr, size_t size)
 			copy_size = size;
 		else
 			copy_size = old_size;
+		ft_memcpy(new_ptr, ptr, copy_size);
 	}
 	free(ptr);
 	return (new_ptr);
