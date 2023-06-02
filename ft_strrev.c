@@ -6,31 +6,32 @@
 /*   By: fgeorgea <fgeorgea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/02 17:45:35 by fgeorgea          #+#    #+#             */
-/*   Updated: 2023/06/02 17:59:30 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2023/06/02 18:07:08 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrev(char *str)
+char	*ft_strrev(const char *str)
 {
 	size_t	i;
 	size_t	len;
-	char	tmp;
-
+	char	*rstr;
+	
 	i = 0;
 	len = 0;
 	if (!str)
 		return (NULL);
 	while (str[len])
 		len++;
+	rstr = malloc(sizeof(char) * (len + 1));
+	if (!rstr)
+		return (NULL);
 	while (i < len)
 	{
-		tmp = str[i];
-		str[i] = str[len - 1];
-		str[len - 1] = tmp;
-		len--;
+		rstr[i] = str[len - i - 1];
 		i++;
 	}
-	return (str);
+	rstr[i] = '\0';
+	return (rstr);
 }

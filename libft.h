@@ -6,7 +6,7 @@
 /*   By: fgeorgea <fgeorgea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 13:09:01 by fgeorgea          #+#    #+#             */
-/*   Updated: 2023/06/02 17:51:10 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2023/06/02 18:04:45 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,7 +85,7 @@ char	*ft_strdup_gnl(char *s1, int *check_nl);
 void	ft_free(void **ptr);
 void	ft_var_free(int len, ...);
 int		ft_strcspn(const char *str, const char *reject);
-char	*ft_strrev(char *str);
+char	*ft_strrev(const char *str);
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 3
