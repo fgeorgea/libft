@@ -6,7 +6,7 @@
 /*   By: fgeorgea <fgeorgea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/02 17:45:35 by fgeorgea          #+#    #+#             */
-/*   Updated: 2023/06/02 18:07:08 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2023/06/02 18:46:11 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strrev(const char *str)
 	size_t	i;
 	size_t	len;
 	char	*rstr;
-	
+
 	i = 0;
 	len = 0;
 	if (!str)

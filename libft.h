@@ -6,7 +6,7 @@
 /*   By: fgeorgea <fgeorgea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 13:09:01 by fgeorgea          #+#    #+#             */
-/*   Updated: 2023/06/02 18:04:45 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2023/06/02 18:40:42 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,6 +86,7 @@ void	ft_free(void **ptr);
 void	ft_var_free(int len, ...);
 int		ft_strcspn(const char *str, const char *reject);
 char	*ft_strrev(const char *str);
+void	*ft_realloc(void *ptr, size_t size);
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 3
