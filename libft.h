@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
+/*   By: fgeorgea <fgeorgea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 13:09:01 by fgeorgea          #+#    #+#             */
-/*   Updated: 2023/02/06 14:28:43 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2023/06/02 17:25:54 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,6 +82,8 @@ size_t	ft_printptr(unsigned long int nb);
 char	*ft_strjoin_gnl(char *s1, char *s2, int *check_nl);
 char	*get_next_line(int fd);
 char	*ft_strdup_gnl(char *s1, int *check_nl);
+void	ft_free(void **ptr);
+void	ft_var_free(int len, ...);
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 3

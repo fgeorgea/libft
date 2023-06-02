@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+         #
+#    By: fgeorgea <fgeorgea@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/03 11:47:36 by fgeorgea          #+#    #+#              #
-#    Updated: 2023/02/06 14:28:08 by fgeorgea         ###   ########.fr        #
+#    Updated: 2023/06/02 17:12:19 by fgeorgea         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -66,6 +66,8 @@ SRCS		=	ft_atoi.c \
 				ft_printnbr.c \
 				get_next_line.c \
 				get_next_line_utils.c \
+				ft_free.c \
+				ft_var_free.c \
 
 OBJS		 = 	$(SRCS:.c=.o)
 
@@ -75,32 +77,20 @@ CC			 =	@gcc
 
 RM			 =	@rm -f
 
-DEF_COLOR	=	\033[0;39m
-RED			=	\033[0;91m
-GREEN		=	\033[0;92m
-BLUE		=	\033[0;94m
-
 .c.o:
 	$(CC) $(FLAGS) -c $< -o $(<:.c=.o)
 
 all:		$(NAME)
 
 $(NAME): 	$(OBJS)
-	@ar -rcs $(NAME) $(OBJS)
-	@echo "$(GREEN)# Created $(NAME) OK ! #$(DEF_COLOR)"
+	ar -rcs $(NAME) $(OBJS)
 
 clean: 
 	$(RM) $(OBJS)
-	@echo "$(RED)# Removed objects #$(DEF_COLOR)"
 
 fclean: 	clean
 	$(RM) $(NAME)
-	@echo "$(RED)# Removed $(NAME) #$(DEF_COLOR)"
 
 re: 		fclean all
-
-norm:
-	@echo "$(BLUE)Check norme$(DEF_COLOR)"
-	@norminette -R CheckDefine
 
 .PHONY: 	all re clean fclean norm
