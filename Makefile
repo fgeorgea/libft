@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: fgeorgea <fgeorgea@student.42.fr>          +#+  +:+       +#+         #
+#    By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/03 11:47:36 by fgeorgea          #+#    #+#              #
-#    Updated: 2023/06/02 18:40:49 by fgeorgea         ###   ########.fr        #
+#    Updated: 2023/06/03 20:16:56 by fgeorgea         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -65,12 +65,24 @@ SRCS		=	ft_atoi.c \
 				ft_printf_utils.c \
 				ft_printnbr.c \
 				get_next_line.c \
-				get_next_line_utils.c \
 				ft_free.c \
 				ft_var_free.c \
 				ft_strcspn.c \
+				ft_strspn.c \
 				ft_strrev.c \
 				ft_realloc.c \
+				ft_ispunct.c \
+				ft_isspace.c \
+				ft_isxdigit.c \
+				ft_iscntrl.c \
+				ft_fabs.c \
+				ft_abs.c \
+				ft_ceil.c \
+				ft_floor.c \
+				ft_pow.c \
+				ft_sqrt.c \
+				ft_isprime.c \
+				ft_factorial.c \
 
 OBJS		 = 	$(SRCS:.c=.o)
 

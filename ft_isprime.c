@@ -1,36 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcspn.c                                       :+:      :+:    :+:   */
+/*   ft_isprime.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/02 17:30:26 by fgeorgea          #+#    #+#             */
-/*   Updated: 2023/06/03 18:33:07 by fgeorgea         ###   ########.fr       */
+/*   Created: 2023/06/03 20:00:47 by fgeorgea          #+#    #+#             */
+/*   Updated: 2023/06/03 20:01:00 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// The strcspn() function calculates the length of the initial segment of str
-// which consists entirely of characters not in reject.
-
-int	ft_strcspn(const char *str, const char *reject)
+int	ft_isprime(int nb)
 {
 	int	i;
-	int	j;
 
-	i = 0;
-	if (!str || !reject)
-		return (-1);
-	while (str[i])
+	i = 2;
+	if (nb <= 0 || nb == 1 || nb == 4)
+		return (0);
+	while (i < 46340 && i < (nb / 2))
 	{
-		j = 0;
-		while (reject[j] && reject[j] != str[i])
-			j++;
-		if (reject[j] && reject[j] == str[i])
-			break ;
+		if (nb % i == 0)
+		{
+			return (0);
+		}
 		i++;
 	}
-	return (i);
+	return (1);
 }

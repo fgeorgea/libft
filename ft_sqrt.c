@@ -1,36 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcspn.c                                       :+:      :+:    :+:   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/02 17:30:26 by fgeorgea          #+#    #+#             */
-/*   Updated: 2023/06/03 18:33:07 by fgeorgea         ###   ########.fr       */
+/*   Created: 2023/06/03 19:54:16 by fgeorgea          #+#    #+#             */
+/*   Updated: 2023/06/03 19:58:01 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-// The strcspn() function calculates the length of the initial segment of str
-// which consists entirely of characters not in reject.
-
-int	ft_strcspn(const char *str, const char *reject)
+int	ft_sqrt(int nb)
 {
 	int	i;
-	int	j;
+	int	result;
 
-	i = 0;
-	if (!str || !reject)
-		return (-1);
-	while (str[i])
+	i = 1;
+	result = 1;
+	if (nb == 0 || nb == 1)
+		return (nb);
+	while (result <= nb && i <= 46340)
 	{
-		j = 0;
-		while (reject[j] && reject[j] != str[i])
-			j++;
-		if (reject[j] && reject[j] == str[i])
-			break ;
 		i++;
+		result = i * i;
 	}
-	return (i);
+	if (((i - 1) * (i - 1)) != nb)
+		return (0);
+	return (i - 1);
 }
