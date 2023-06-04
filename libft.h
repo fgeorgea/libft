@@ -6,7 +6,7 @@
 /*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 13:09:01 by fgeorgea          #+#    #+#             */
-/*   Updated: 2023/06/04 02:40:33 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2023/06/04 02:54:18 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -135,5 +135,9 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 // GNL
 char	*get_next_line(int fd);
+
+// UTILS
+size_t	ft_arraylen(void **array);
+void	ft_arrayrev(void **array);
 
 #endif

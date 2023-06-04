@@ -6,7 +6,7 @@
 #    By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/03 11:47:36 by fgeorgea          #+#    #+#              #
-#    Updated: 2023/06/04 01:57:26 by fgeorgea         ###   ########.fr        #
+#    Updated: 2023/06/04 02:54:13 by fgeorgea         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -84,6 +84,8 @@ SRCS		=	ft_atoi.c \
 				ft_isprime.c \
 				ft_factorial.c \
 				ft_strdup_reject.c \
+				ft_arraylen.c \
+				ft_arrayrev.c \
 
 OBJS		 = 	$(SRCS:.c=.o)
 
