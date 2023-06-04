@@ -6,11 +6,11 @@
 /*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/04 19:44:51 by fgeorgea          #+#    #+#             */
-/*   Updated: 2023/06/04 19:56:50 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2023/06/04 21:19:26 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
 char	**ft_arraydup(char **src)
 {
@@ -20,7 +20,7 @@ char	**ft_arraydup(char **src)
 
 	if (!src)
 		return (NULL);
-	len = ft_arraylen(src);
+	len = ft_arraylen((void **)src);
 	array = malloc(sizeof(char **) * (len + 1));
 	if (!array)
 		return (NULL);

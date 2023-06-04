@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
 // The strcspn() function calculates the length of the initial segment of str
 // which consists entirely of characters not in reject.
