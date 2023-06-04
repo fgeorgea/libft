@@ -6,7 +6,7 @@
 /*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 13:09:01 by fgeorgea          #+#    #+#             */
-/*   Updated: 2023/06/04 03:19:03 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2023/06/04 19:40:08 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -136,9 +136,13 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 // GNL
 char	*get_next_line(int fd);
 
-// UTILS
+
+// ARRAY
 size_t	ft_arraylen(void **array);
-void	ft_arrayrev(void **array);
-void	**ft_add_to_array(void **src, void *new, int pos);
+void	array_rev(void **array);
+void	**array_add(void **src, void *new, int pos);
+void	**array_del(void **src, int pos);
+void	**array_replace(void **src, void *new, int pos);
+void	*array_get_value(void **array, int pos);
 
 #endif

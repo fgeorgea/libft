@@ -1,57 +1,52 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_add_to_array.c                                  :+:      :+:    :+:   */
+/*   array_replace.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/04 03:03:11 by fgeorgea          #+#    #+#             */
-/*   Updated: 2023/06/04 03:40:52 by fgeorgea         ###   ########.fr       */
+/*   Created: 2023/06/04 16:41:17 by fgeorgea          #+#    #+#             */
+/*   Updated: 2023/06/04 19:41:14 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void	fill_array(void **src, void **array, void *new, int pos)
+static void	replace_index(void **array, void **src, void *new, int pos)
 {
 	size_t	i;
-	size_t	j;
 	size_t	len;
 
 	i = 0;
-	j = 0;
-	len = ft_arraylen(src) + 1;
-	while (i < len)
+	len = ft_arraylen(src);
+	while (src[i])
 	{
 		if (i == pos)
 		{
+			free(src[i]);
 			array[i] = new;
-			j = i;
 		}
 		else
-		{
-			array[i] = src[j];
-			j++;
-		}
+			array[i] = src[i];
 		i++;
 	}
 	array[i] = NULL;
 	free(src);
 }
 
-void	**ft_add_to_array(void **src, void *new, int pos)
+void	**array_replace(void **src, void *new, int pos)
 {
 	size_t	len;
 	void	**array;
 
-	if (!src || !new || !*src)
+	if (!src || !new)
 		return (NULL);
-	len = ft_arraylen(src) + 1;
-	if (pos <= 0)
-		pos = len -1;
-	array = malloc(sizeof(void **) * len + 1);
+	len = ft_arraylen(src);
+	if (pos < 0)
+		pos = len - 1;
+	array = malloc(sizeof(void **) * (len + 1));
 	if (!array)
 		return (NULL);
-	fill_array(src, array, new, pos);
+	replace_index(array, src, new, pos);
 	return (array);
 }
