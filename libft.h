@@ -6,7 +6,7 @@
 /*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 13:09:01 by fgeorgea          #+#    #+#             */
-/*   Updated: 2023/06/04 19:40:08 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2023/06/04 19:57:05 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -139,10 +139,11 @@ char	*get_next_line(int fd);
 
 // ARRAY
 size_t	ft_arraylen(void **array);
-void	array_rev(void **array);
-void	**array_add(void **src, void *new, int pos);
-void	**array_del(void **src, int pos);
-void	**array_replace(void **src, void *new, int pos);
-void	*array_get_value(void **array, int pos);
+void	ft_array_rev(void **array);
+void	**ft_array_add(void **src, void *new, int pos);
+void	**ft_array_del(void **src, int pos);
+void	**ft_array_replace(void **src, void *new, int pos);
+void	*ft_array_get_value(void **array, int pos);
+char	**ft_arraydup(char **src);
 
 #endif
