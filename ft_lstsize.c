@@ -6,23 +6,25 @@
 /*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 17:02:49 by fgeorgea          #+#    #+#             */
-/*   Updated: 2022/10/11 17:00:18 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2023/06/04 02:35:53 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_lstsize(t_list *lst)
+int	ft_lstsize(void *list)
 {
-	size_t	i;
+	size_t		i;
+	t_generic	*lst;
 
-	i = 1;
 	if (!lst)
 		return (0);
-	while (lst->next)
+	i = 0;
+	lst = list;
+	while (lst)
 	{
-		lst = lst->next;
 		++i;
+		lst = lst->next;
 	}
 	return (i);
 }

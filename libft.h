@@ -6,7 +6,7 @@
 /*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 13:09:01 by fgeorgea          #+#    #+#             */
-/*   Updated: 2023/06/04 02:28:06 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2023/06/04 02:40:33 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,21 @@
 
 typedef struct s_list
 {
-	void			*content;
 	struct s_list	*next;
+	void			*content;
+	int				nbr;
 }		t_list;
+
+typedef struct s_char
+{
+	struct s_char	*next;
+	char			c;
+}		t_char;
+
+typedef struct s_generic
+{
+	struct s_generic	*next;
+}		t_generic;
 
 // STRING
 size_t	ft_strlen(const char *s);
@@ -113,7 +125,7 @@ size_t	ft_printptr(unsigned long int nb);
 // LINKED_LIST
 t_list	*ft_lstnew(void *content);
 void	ft_lstadd_front(t_list **lst, t_list *new);
-int		ft_lstsize(t_list *lst);
+int		ft_lstsize(void *lst);
 t_list	*ft_lstlast(t_list *lst);
 void	ft_lstadd_back(t_list **lst, t_list *new);
 void	ft_lstdelone(t_list *lst, void (*del)(void*));
