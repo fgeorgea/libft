@@ -6,7 +6,7 @@
 /*   By: fgeorgea <fgeorgea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 13:09:01 by fgeorgea          #+#    #+#             */
-/*   Updated: 2023/06/09 13:07:55 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2023/06/13 17:13:34 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -144,5 +144,8 @@ void	**ft_array_del(void **src, int pos);
 void	**ft_array_replace(void **src, void *new, int pos);
 void	*ft_array_get_value(void **array, int pos);
 char	**ft_arraydup(char **src);
+
+// VARIADICS
+int		ft_close(int size, ...);
 
 #endif

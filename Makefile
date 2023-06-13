@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+         #
+#    By: fgeorgea <fgeorgea@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/03 11:47:36 by fgeorgea          #+#    #+#              #
-#    Updated: 2023/06/04 21:13:48 by fgeorgea         ###   ########.fr        #
+#    Updated: 2023/06/13 17:13:51 by fgeorgea         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,6 +19,7 @@ DISPLAY		=	display/
 LIST		=	list/
 STRING		=	string/
 MEMORY		=	memory/
+VARIADICS	=	variadics/
 
 SRCS		=	$(STRING)ft_atoi.c \
 				$(STRING)ft_strlcpy.c \
@@ -99,6 +100,7 @@ SRCS		=	$(STRING)ft_atoi.c \
 	   			$(ARRAY)ft_split.c \
 	   			$(ARRAY)ft_split_charset.c \
 				$(ARRAY)ft_arraydup.c \
+				$(VARIADICS)ft_close.c \
 
 OBJS		 = 	$(SRCS:.c=.o)
 

@@ -1,30 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_var_free.c                                      :+:      :+:    :+:   */
+/*   ft_close.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fgeorgea <fgeorgea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/02 17:10:03 by fgeorgea          #+#    #+#             */
-/*   Updated: 2023/06/13 17:03:42 by fgeorgea         ###   ########.fr       */
+/*   Created: 2023/06/13 17:05:19 by fgeorgea          #+#    #+#             */
+/*   Updated: 2023/06/13 17:14:26 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-void	ft_var_free(int len, ...)
+int	ft_close(int size, ...)
 {
-	size_t	i;
 	va_list	ap;
+	int		*tmp_fd;
 
-	i = 0;
-	if (len <= 0)
-		return ;
-	va_start(ap, len);
-	while (i < len)
+	if (size <= 0)
+		return (0);
+	va_start(ap, size);
+	while (size >= 0)
 	{
-		ft_free(va_arg(ap, void **));
-		i++;
+		tmp_fd = va_arg(ap, int *);
+		if (tmp_fd && *tmp_fd >= 0)
+		{
+			if (close(*tmp_fd) == -1)
+				return (size);
+			*tmp_fd = -2;
+		}
+		size--;
 	}
 	va_end(ap);
+	return (0);
 }
