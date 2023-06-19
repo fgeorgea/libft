@@ -6,7 +6,7 @@
 #    By: fgeorgea <fgeorgea@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/03 11:47:36 by fgeorgea          #+#    #+#              #
-#    Updated: 2023/06/13 17:30:29 by fgeorgea         ###   ########.fr        #
+#    Updated: 2023/06/19 13:34:45 by fgeorgea         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -106,12 +106,10 @@ OBJS		 = 	$(SRCS:.c=.o)
 
 CFLAGS		 =	-Wall -Wextra -Werror
 
-CC			 =	@gcc
-
-RM			 =	@rm -f
+RM			 =	rm -f
 
 .c.o:
-	$(CC) $(FLAGS) -c $< -o $(<:.c=.o)
+	gcc $(CFLAGS) -c $< -o $(<:.c=.o)
 
 all:		$(NAME)
 
@@ -124,6 +122,6 @@ clean:
 fclean: 	clean
 	$(RM) $(NAME)
 
-re: 		fclean all
+re: fclean all
 
-.PHONY: 	all re clean fclean norm
+.PHONY: all re clean fclean

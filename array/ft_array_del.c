@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_array_del.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
+/*   By: fgeorgea <fgeorgea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/04 16:02:05 by fgeorgea          #+#    #+#             */
-/*   Updated: 2023/06/04 19:43:36 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2023/06/19 13:33:10 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-static void	remove_index(void **array, void **src, size_t len, int pos)
+static void	remove_index(void **array, void **src, int len, int pos)
 {
-	size_t	i;
-	size_t	j;
+	int	i;
+	int	j;
 
 	i = 0;
 	j = 0;
@@ -39,7 +39,7 @@ static void	remove_index(void **array, void **src, size_t len, int pos)
 
 void	**ft_array_del(void **src, int pos)
 {
-	size_t	len;
+	int		len;
 	void	**array;
 
 	if (!src)

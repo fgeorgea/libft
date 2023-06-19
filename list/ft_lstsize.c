@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
+/*   By: fgeorgea <fgeorgea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 17:02:49 by fgeorgea          #+#    #+#             */
-/*   Updated: 2023/06/04 02:35:53 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2023/06/19 13:31:48 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_lstsize(void *list)
 	size_t		i;
 	t_generic	*lst;
 
-	if (!lst)
+	if (!list)
 		return (0);
 	i = 0;
 	lst = list;

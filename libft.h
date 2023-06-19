@@ -6,7 +6,7 @@
 /*   By: fgeorgea <fgeorgea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 13:09:01 by fgeorgea          #+#    #+#             */
-/*   Updated: 2023/06/13 17:30:33 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2023/06/19 13:17:20 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -115,12 +115,12 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
-int		ft_printf(const char *str, ...);
-size_t	ft_printchar(char c);
-size_t	ft_printstr(char *str);
-size_t	ft_printnbr(long int nb);
-void	ft_printhex(unsigned int nbr, char *base, size_t *len);
-size_t	ft_printptr(unsigned long int nb);
+int		ft_printf(int fd, const char *str, ...);
+int		ft_printchar(int fd, char c);
+int		ft_printstr(int fd, char *str);
+int		ft_printnbr(int fd, long int nb);
+void	ft_printhex(int fd, unsigned int nbr, char *base, int *len);
+int		ft_printptr(int fd, unsigned long int nb);
 
 // LINKED_LIST
 t_list	*ft_lstnew(void *content);

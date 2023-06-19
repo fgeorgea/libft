@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_array_get_value.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
+/*   By: fgeorgea <fgeorgea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/04 16:52:46 by fgeorgea          #+#    #+#             */
-/*   Updated: 2023/06/04 19:43:43 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2023/06/19 13:33:33 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_array_get_value(void **array, int pos)
 {
-	size_t	len;
+	int	len;
 
 	if (!array)
 		return (NULL);

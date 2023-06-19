@@ -6,7 +6,7 @@
 /*   By: fgeorgea <fgeorgea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/02 17:10:03 by fgeorgea          #+#    #+#             */
-/*   Updated: 2023/06/13 17:03:42 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2023/06/19 13:31:24 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_var_free(int len, ...)
 {
-	size_t	i;
+	int		i;
 	va_list	ap;
 
 	i = 0;

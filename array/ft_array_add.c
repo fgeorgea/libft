@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_array_add.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
+/*   By: fgeorgea <fgeorgea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/04 03:03:11 by fgeorgea          #+#    #+#             */
-/*   Updated: 2023/06/04 19:42:56 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2023/06/19 13:32:48 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 static void	fill_array(void **src, void **array, void *new, int pos)
 {
-	size_t	i;
-	size_t	j;
-	size_t	len;
+	int	i;
+	int	j;
+	int	len;
 
 	i = 0;
 	j = 0;
@@ -41,7 +41,7 @@ static void	fill_array(void **src, void **array, void *new, int pos)
 
 void	**ft_array_add(void **src, void *new, int pos)
 {
-	size_t	len;
+	int		len;
 	void	**array;
 
 	if (!src || !new || !*src)
