@@ -6,7 +6,7 @@
 /*   By: fgeorgea <fgeorgea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 13:09:01 by fgeorgea          #+#    #+#             */
-/*   Updated: 2023/06/19 13:17:20 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2023/06/21 12:16:34 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@
 # include <stdlib.h>
 # include <limits.h>
 # include <stdarg.h>
+
+# define PI 3.141592653589793
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 3
@@ -105,6 +107,8 @@ int		ft_sqrt(int nb);
 int		ft_isprime(int nb);
 int		ft_factorial(int nb);
 size_t	ft_nbrlen(long int nb);
+float	ft_rad_to_deg(float radian);
+float	ft_deg_to_rad(float degrees);
 
 // DISPLAY
 void	ft_putchar(char c);
