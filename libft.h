@@ -6,7 +6,7 @@
 /*   By: fgeorgea <fgeorgea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 13:09:01 by fgeorgea          #+#    #+#             */
-/*   Updated: 2023/06/23 18:37:59 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2023/06/23 18:43:56 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -115,7 +115,6 @@ int		ft_factorial(int nb);
 size_t	ft_nbrlen(long int nb);
 float	ft_rad_to_deg(float radian);
 float	ft_deg_to_rad(float degrees);
-double	ft_sine(double opposite, double hypotenuse, double *angle);
 
 // DISPLAY
 void	ft_putchar(char c);

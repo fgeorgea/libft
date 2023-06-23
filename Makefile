@@ -6,7 +6,7 @@
 #    By: fgeorgea <fgeorgea@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/03 11:47:36 by fgeorgea          #+#    #+#              #
-#    Updated: 2023/06/23 18:38:07 by fgeorgea         ###   ########.fr        #
+#    Updated: 2023/06/23 18:43:47 by fgeorgea         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -97,7 +97,6 @@ SRCS		=	$(STRING)ft_atoi.c \
 				$(MATH)ft_factorial.c \
 				$(MATH)ft_rad_to_deg.c \
 				$(MATH)ft_deg_to_rad.c \
-				$(MATH)ft_sine.c \
 				$(ARRAY)ft_arraylen.c \
 				$(ARRAY)ft_array_rev.c \
 				$(ARRAY)ft_array_add.c \
