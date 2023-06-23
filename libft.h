@@ -6,7 +6,7 @@
 /*   By: fgeorgea <fgeorgea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 13:09:01 by fgeorgea          #+#    #+#             */
-/*   Updated: 2023/06/21 12:16:34 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2023/06/23 18:37:59 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,10 @@
 # include <stdlib.h>
 # include <limits.h>
 # include <stdarg.h>
+# include <math.h>
 
 # define PI 3.141592653589793
+# define PRECISION 10
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 3
@@ -71,6 +73,10 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 int		ft_atoi(const char *str, int *n);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
+int		ft_strcmp_strict(const char *s1, const char *s2);
+char	*ft_strtok(char *str, const char *token);
+int		ft_strcmp(const char *s1, const char *s2);
+char	*ft_strpbrk(const char *str, const char *accept);
 
 // MEMORY
 void	*ft_memset(void *b, int c, size_t len);
@@ -109,6 +115,7 @@ int		ft_factorial(int nb);
 size_t	ft_nbrlen(long int nb);
 float	ft_rad_to_deg(float radian);
 float	ft_deg_to_rad(float degrees);
+double	ft_sine(double opposite, double hypotenuse, double *angle);
 
 // DISPLAY
 void	ft_putchar(char c);
