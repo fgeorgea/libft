@@ -6,7 +6,7 @@
 /*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/20 19:08:39 by fgeorgea          #+#    #+#             */
-/*   Updated: 2023/06/03 20:16:42 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2023/06/25 01:45:31 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -115,11 +115,11 @@ static char	*get_line(char *line, char *tmp, int *check_nl, int fd)
 
 char	*get_next_line(int fd)
 {
-	static char	tmp[OPEN_MAX][BUFFER_SIZE + 1];
+	static char	tmp[FOPEN_MAX][BUFFER_SIZE + 1];
 	char		*line;
 	int			check_nl;
 
-	if ((fd < 0 || fd >= OPEN_MAX) || BUFFER_SIZE <= 0)
+	if ((fd < 0 || fd >= FOPEN_MAX) || BUFFER_SIZE <= 0)
 		return (NULL);
 	check_nl = -1;
 	line = ft_strdup_gnl(tmp[fd], &check_nl);
