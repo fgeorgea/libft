@@ -1,28 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   char.h                                             :+:      :+:    :+:   */
+/*   array.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/25 00:03:29 by fgeorgea          #+#    #+#             */
-/*   Updated: 2023/06/25 00:03:48 by fgeorgea         ###   ########.fr       */
+/*   Created: 2023/06/25 00:02:20 by fgeorgea          #+#    #+#             */
+/*   Updated: 2023/06/25 01:32:32 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CHAR_H
-# define CHAR_H
+#ifndef ARRAY_LIB_H
+# define ARRAY_LIB_H
 
-int		ft_isalpha(int c);
-int		ft_isdigit(int c);
-int		ft_isalnum(int c);
-int		ft_isascii(int c);
-int		ft_isprint(int c);
-int		ft_ispunct(int c);
-int		ft_isspace(int c);
-int		ft_isxdigit(int c);
-int		ft_iscntrl(int c);
-int		ft_tolower(int c);
-int		ft_toupper(int c);
+size_t	ft_arraylen(void **array);
+void	ft_array_rev(void **array);
+void	**ft_array_add(void **src, void *new, int pos);
+void	**ft_array_del(void **src, int pos);
+void	**ft_array_replace(void **src, void *new, int pos);
+void	*ft_array_get_value(void **array, int pos);
+char	**ft_arraydup(char **src);
 
 #endif

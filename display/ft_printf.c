@@ -6,12 +6,11 @@
 /*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/21 19:31:32 by fgeorgea          #+#    #+#             */
-/*   Updated: 2023/06/24 23:33:22 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2023/06/25 01:31:43 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
-#include <stdio.h>
 
 static void	ft_check_type(int fd, va_list *ap, char type, int *len)
 {

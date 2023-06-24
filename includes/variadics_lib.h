@@ -1,28 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   defines.h                                          :+:      :+:    :+:   */
+/*   variadics.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/25 00:01:18 by fgeorgea          #+#    #+#             */
-/*   Updated: 2023/06/25 00:13:52 by fgeorgea         ###   ########.fr       */
+/*   Created: 2023/06/25 00:05:08 by fgeorgea          #+#    #+#             */
+/*   Updated: 2023/06/25 01:33:31 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DEFINES_H
-# define DEFINES_H
+#ifndef VARIADICS_LIB_H
+# define VARIADICS_LIB_H
 
-# ifdef NULL
-#  undef NULL
-# endif
-# define NULL (void *)0
-
-# ifdef BUFFER_SIZE
-#  undef BUFFER_SIZE
-# endif
-# define BUFFER_SIZE 100
-
-# define PI 3.141592
+int		ft_close_var(int size, ...);
 
 #endif

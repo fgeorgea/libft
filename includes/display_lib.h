@@ -6,12 +6,12 @@
 /*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/25 00:04:31 by fgeorgea          #+#    #+#             */
-/*   Updated: 2023/06/25 00:05:00 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2023/06/25 01:32:53 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DISPLAY_H
-# define DISPLAY_H
+#ifndef DISPLAY_LIB_H
+# define DISPLAY_LIB_H
 
 void	ft_putchar(char c);
 void	ft_putstr(char *s);

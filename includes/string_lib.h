@@ -6,12 +6,12 @@
 /*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/25 00:07:07 by fgeorgea          #+#    #+#             */
-/*   Updated: 2023/06/25 00:20:25 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2023/06/25 01:33:17 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef STRING_H
-# define STRING_H
+#ifndef STRING_LIB_H
+# define STRING_LIB_H
 
 size_t	ft_strlen(const char *s);
 int		ft_strcspn(const char *str, const char *reject);

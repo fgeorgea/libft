@@ -6,12 +6,12 @@
 /*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/25 00:05:40 by fgeorgea          #+#    #+#             */
-/*   Updated: 2023/06/25 00:05:55 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2023/06/25 01:32:58 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIST_H
-# define LIST_H
+#ifndef LIST_LIB_H
+# define LIST_LIB_H
 
 t_list	*ft_lstnew(void *content);
 void	ft_lstadd_front(t_list **lst, t_list *new);

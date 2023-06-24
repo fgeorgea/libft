@@ -1,28 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   math.h                                             :+:      :+:    :+:   */
+/*   structs.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/25 00:04:04 by fgeorgea          #+#    #+#             */
-/*   Updated: 2023/06/25 00:04:21 by fgeorgea         ###   ########.fr       */
+/*   Created: 2023/06/25 00:06:32 by fgeorgea          #+#    #+#             */
+/*   Updated: 2023/06/25 01:33:23 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MATH_H
-# define MATH_H
+#ifndef STRUCTS_LIB_H
+# define STRUCTS_LIB_H
 
-double	ft_fabs(double nbr);
-int		ft_abs(int nbr);
-double	ft_ceil(double nbr);
-double	ft_floor(double nbr);
-int		ft_pow(int nbr, int power);
-int		ft_sqrt(int nb);
-int		ft_isprime(int nb);
-int		ft_factorial(int nb);
-size_t	ft_nbrlen(long int nb);
-float	ft_rad_to_deg(float radian);
-float	ft_deg_to_rad(float degrees);
+typedef struct s_list
+{
+	struct s_list	*next;
+	void			*content;
+	int				nbr;
+}		t_list;
+
+typedef struct s_char
+{
+	struct s_char	*next;
+	char			c;
+}		t_char;
+
+typedef struct s_generic
+{
+	struct s_generic	*next;
+}		t_generic;
 
 #endif

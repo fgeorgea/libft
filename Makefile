@@ -6,7 +6,7 @@
 #    By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/03 11:47:36 by fgeorgea          #+#    #+#              #
-#    Updated: 2023/06/25 00:20:46 by fgeorgea         ###   ########.fr        #
+#    Updated: 2023/06/25 01:37:30 by fgeorgea         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -114,7 +114,7 @@ SRCS		=	$(CHAR)ft_isalnum.c \
 
 OBJS		 = 	$(SRCS:.c=.o)
 
-CFLAGS		 =	-Wall -Wextra -Werror -Wpedantic
+CFLAGS		 =	-Wall -Wextra -Werror
 
 RM			 =	rm -f
 

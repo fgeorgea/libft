@@ -6,7 +6,7 @@
 /*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 13:09:01 by fgeorgea          #+#    #+#             */
-/*   Updated: 2023/06/25 00:15:24 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2023/06/25 01:32:22 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,15 +18,15 @@
 # include <limits.h>
 # include <stdarg.h>
 # include <errno.h>
-# include "includes/defines.h"
-# include "includes/structs.h"
-# include "includes/char.h"
-# include "includes/string.h"
-# include "includes/array.h"
-# include "includes/display.h"
-# include "includes/list.h"
-# include "includes/math.h"
-# include "includes/memory.h"
-# include "includes/variadics.h"
+# include "./includes/defines_lib.h"
+# include "./includes/structs_lib.h"
+# include "./includes/char_lib.h"
+# include "./includes/string_lib.h"
+# include "./includes/array_lib.h"
+# include "./includes/display_lib.h"
+# include "./includes/list_lib.h"
+# include "./includes/math_lib.h"
+# include "./includes/memory_lib.h"
+# include "./includes/variadics_lib.h"
 
 #endif

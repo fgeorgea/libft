@@ -1,20 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   memory.h                                           :+:      :+:    :+:   */
+/*   math.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/25 00:06:03 by fgeorgea          #+#    #+#             */
-/*   Updated: 2023/06/25 00:15:32 by fgeorgea         ###   ########.fr       */
+/*   Created: 2023/06/25 00:04:04 by fgeorgea          #+#    #+#             */
+/*   Updated: 2023/06/25 01:33:05 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MEMORY_H
-# define MEMORY_H
+#ifndef MATH_LIB_H
+# define MATH_LIB_H
 
-void	ft_free(void **ptr);
-void	ft_var_free(int len, ...);
-void	*ft_realloc(void *ptr, size_t size);
+double	ft_fabs(double nbr);
+int		ft_abs(int nbr);
+double	ft_ceil(double nbr);
+double	ft_floor(double nbr);
+int		ft_pow(int nbr, int power);
+int		ft_sqrt(int nb);
+int		ft_isprime(int nb);
+int		ft_factorial(int nb);
+size_t	ft_nbrlen(long int nb);
+float	ft_rad_to_deg(float radian);
+float	ft_deg_to_rad(float degrees);
 
 #endif
