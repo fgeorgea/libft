@@ -6,7 +6,7 @@
 #    By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/03 11:47:36 by fgeorgea          #+#    #+#              #
-#    Updated: 2023/06/24 18:49:03 by fgeorgea         ###   ########.fr        #
+#    Updated: 2023/06/24 23:21:49 by fgeorgea         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,6 +20,7 @@ LIST		=	list/
 STRING		=	string/
 MEMORY		=	memory/
 VARIADICS	=	variadics/
+ERROR		=	error/
 
 SRCS		=	$(STRING)ft_atoi.c \
 				$(STRING)ft_strlcpy.c \
@@ -107,11 +108,13 @@ SRCS		=	$(STRING)ft_atoi.c \
 	   			$(ARRAY)ft_split.c \
 	   			$(ARRAY)ft_split_charset.c \
 				$(ARRAY)ft_arraydup.c \
-				$(VARIADICS)ft_close.c \
+				$(VARIADICS)ft_close_var.c \
+				$(ERROR)ft_perror.c \
+				$(ERROR)ft_strerror.c \
 
 OBJS		 = 	$(SRCS:.c=.o)
 
-CFLAGS		 =	-Wall -Wextra -Werror -Wpedantic
+CFLAGS		 =	-Wall -Wextra -Werror #-Wpedantic
 
 RM			 =	rm -f
 

@@ -6,11 +6,9 @@
 /*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/03 19:12:15 by fgeorgea          #+#    #+#             */
-/*   Updated: 2023/06/03 20:17:59 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2023/06/24 20:10:59 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "../libft.h"
 
 int	ft_isspace(int c)
 {

@@ -6,7 +6,7 @@
 /*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 13:09:01 by fgeorgea          #+#    #+#             */
-/*   Updated: 2023/06/24 18:34:00 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2023/06/24 22:30:58 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <limits.h>
 # include <stdarg.h>
 # include <math.h>
+# include <errno.h>
 
 # define PI 3.141592653589793
 # define PRECISION 10
@@ -157,6 +158,10 @@ void	*ft_array_get_value(void **array, int pos);
 char	**ft_arraydup(char **src);
 
 // VARIADICS
-int		ft_close(int size, ...);
+int		ft_close_var(int size, ...);
+
+// ERROR
+char	*ft_strerror(int errnum);
+void	ft_perror(const char *message);
 
 #endif

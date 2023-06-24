@@ -1,22 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_perror.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/03 14:08:03 by fgeorgea          #+#    #+#             */
-/*   Updated: 2023/06/24 20:09:43 by fgeorgea         ###   ########.fr       */
+/*   Created: 2023/06/24 20:20:35 by fgeorgea          #+#    #+#             */
+/*   Updated: 2023/06/24 23:20:36 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
+#include <stdio.h>
 
-char	*ft_strchr(const char *str, int c)
+void	ft_perror(const char *message)
 {
-	while (*str && *str != (char)c)
-		str++;
-	if (*str == (char)c)
-		return ((char *)str);
-	return (NULL);
+	char	*err_mess;
+
+	err_mess = ft_strerror(errno);
+	if (message)
+	{
+		ft_putstr_fd((char *)message, 2);
+		ft_putstr_fd(": ", 2);
+	}
+	ft_putstr_fd(err_mess, 2);
+	ft_putstr_fd("\n", 2);
 }
