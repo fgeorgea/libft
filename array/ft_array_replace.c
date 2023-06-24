@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_array_replace.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fgeorgea <fgeorgea@student.42.fr>          +#+  +:+       +#+        */
+/*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/04 16:41:17 by fgeorgea          #+#    #+#             */
-/*   Updated: 2023/06/19 13:33:24 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2023/06/24 18:17:52 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,8 @@
 static void	replace_index(void **array, void **src, void *new, int pos)
 {
 	int	i;
-	int	len;
 
 	i = 0;
-	len = ft_arraylen(src);
 	while (src[i])
 	{
 		if (i == pos)
