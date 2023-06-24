@@ -6,35 +6,48 @@
 /*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/03 16:38:15 by fgeorgea          #+#    #+#             */
-/*   Updated: 2022/10/12 18:33:28 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2023/06/24 19:01:37 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+static void	asign_values(char *dst, char *src, size_t len, int is_overlap)
 {
-	int	i;
+	size_t	i;
 
-	if (!dst || !src)
-		return (NULL);
-	if (src < dst)
+	if (!is_overlap)
 	{
-		i = (int)len - 1;
+		i = len - 1;
 		while (i >= 0)
 		{
-			*(char *)(dst + i) = *(char *)(src + i);
+			*(dst + i) = *(src + i);
 			i--;
 		}
 	}
 	else
 	{
 		i = 0;
-		while (i < (int)len)
+		while (i >= 0)
 		{
-			*(char *)(dst + i) = *(char *)(src + i);
-			i++;
+			*(dst + i) = *(src + i);
+			i--;
 		}
 	}
+}
+
+void	*ft_memmove(void *dst, const void *src, size_t len)
+{
+	char	*src_cp;
+	char	*dst_cp;
+
+	if (!dst || !src)
+		return (NULL);
+	src_cp = (char *)src;
+	dst_cp = (char *)dst;
+	if (src < dst)
+		asign_values(dst_cp, src_cp, len, 0);
+	else
+		asign_values(dst_cp, src_cp, len, 1);
 	return (dst);
 }

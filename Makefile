@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: fgeorgea <fgeorgea@student.42.fr>          +#+  +:+       +#+         #
+#    By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/03 11:47:36 by fgeorgea          #+#    #+#              #
-#    Updated: 2023/06/23 18:43:47 by fgeorgea         ###   ########.fr        #
+#    Updated: 2023/06/24 18:49:03 by fgeorgea         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,6 +25,7 @@ SRCS		=	$(STRING)ft_atoi.c \
 				$(STRING)ft_strlcpy.c \
 				$(STRING)ft_strlcat.c \
 				$(STRING)ft_strdup.c \
+				$(STRING)ft_strndup.c \
 	   			$(STRING)ft_substr.c \
 	  			$(STRING)ft_strjoin.c \
 				$(STRING)ft_strchr.c \
@@ -110,7 +111,7 @@ SRCS		=	$(STRING)ft_atoi.c \
 
 OBJS		 = 	$(SRCS:.c=.o)
 
-CFLAGS		 =	-Wall -Wextra -Werror
+CFLAGS		 =	-Wall -Wextra -Werror -Wpedantic
 
 RM			 =	rm -f
 

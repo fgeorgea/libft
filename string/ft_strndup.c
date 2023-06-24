@@ -1,31 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strndup.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/03 14:27:06 by fgeorgea          #+#    #+#             */
-/*   Updated: 2023/06/24 19:44:59 by fgeorgea         ###   ########.fr       */
+/*   Created: 2023/06/24 18:26:17 by fgeorgea          #+#    #+#             */
+/*   Updated: 2023/06/24 18:28:12 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-char	*ft_strrchr(const char *str, int c)
+char	*ft_strndup(char *src, int n)
 {
-	const char	*last_occurrence;
+	int		i;
+	char	*str;
 
-	if (!str)
+	if (!src)
 		return (NULL);
-	last_occurrence = NULL;
-	while (*str)
+	i = 0;
+	while (src[i])
+		i++;
+	if (i > n)
+		i = n;
+	str = malloc(sizeof(char) * (i + 1));
+	if (!str)
+		return (0);
+	i = 0;
+	while (src[i] && i < n)
 	{
-		if (*str == c)
-			last_occurrence = str;
-		str++;
+		str[i] = src[i];
+		i++;
 	}
-	if (*str == c)
-		return ((char *)str);
-	return ((char *)last_occurrence);
+	str[i] = '\0';
+	return (str);
 }
