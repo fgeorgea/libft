@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   string.h                                           :+:      :+:    :+:   */
+/*   string_lib.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/25 00:07:07 by fgeorgea          #+#    #+#             */
-/*   Updated: 2023/06/25 01:33:17 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2023/06/26 02:24:23 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 int		ft_atoi(const char *str, int *n);
+char	*ft_strcpy(char	*dest, char	*src);
+char	*ft_strncpy(char *dest, char *src, unsigned int n);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 int		ft_strcmp_strict(const char *s1, const char *s2);
@@ -55,5 +57,7 @@ char	*ft_strerror9(int errnum);
 char	*ft_strerror10(int errnum);
 char	*ft_strerror11(int errnum);
 char	*ft_strerror12(int errnum);
+char	*ft_strstr(const char *haystack, const char *needle);
+char	*str_replace(const char *str, const char *find, const char *replace);
 
 #endif
