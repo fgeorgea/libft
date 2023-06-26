@@ -6,7 +6,7 @@
 #    By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/03 11:47:36 by fgeorgea          #+#    #+#              #
-#    Updated: 2023/06/26 02:16:25 by fgeorgea         ###   ########.fr        #
+#    Updated: 2023/06/26 02:31:03 by fgeorgea         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -70,6 +70,8 @@ SRCS		=	$(CHAR)ft_isalnum.c \
 	   			$(STRING)ft_strcpy.c \
 	   			$(STRING)ft_strncpy.c \
 	   			$(STRING)ft_strreplace.c \
+	   			$(STRING)ft_strcat.c \
+	   			$(STRING)ft_strncat.c \
 				$(MEMORY)ft_free.c \
 				$(MEMORY)ft_realloc.c \
 				$(MEMORY)ft_var_free.c \
