@@ -6,7 +6,7 @@
 /*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/25 00:07:07 by fgeorgea          #+#    #+#             */
-/*   Updated: 2023/06/27 01:34:41 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2023/06/27 02:23:44 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,5 +63,6 @@ char	*ft_strstr(const char *haystack, const char *needle);
 char	*str_replace(const char *str, const char *find, const char *replace);
 char	*ft_arrayjoin(char **strs, char *sep);
 char	*ft_strinsert(const char *str, const char *substr, int pos);
+size_t	ft_strcount(const char *str, const char *substr);
 
 #endif
