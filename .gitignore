@@ -3,3 +3,5 @@
 */*/*.o
 main.c
 a.out
+.vscode
+*/.vscode
