@@ -6,7 +6,7 @@
 /*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/25 00:07:07 by fgeorgea          #+#    #+#             */
-/*   Updated: 2023/06/27 02:47:46 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2023/06/28 03:46:55 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,5 +66,7 @@ char	*ft_strinsert(const char *str, const char *substr, int pos);
 size_t	ft_strcount(const char *str, const char *substr);
 char	*ft_struniq(const char *src);
 char	*ft_strcapitalize(const char *src);
+char	*ft_strtoupper(const char *s);
+char	*ft_strtolower(const char *s);
 
 #endif

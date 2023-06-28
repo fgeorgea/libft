@@ -6,7 +6,7 @@
 #    By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/03 11:47:36 by fgeorgea          #+#    #+#              #
-#    Updated: 2023/06/27 02:47:38 by fgeorgea         ###   ########.fr        #
+#    Updated: 2023/06/28 03:47:02 by fgeorgea         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -77,6 +77,8 @@ SRCS		=	$(CHAR)ft_isalnum.c \
 	   			$(STRING)ft_strcount.c \
 	   			$(STRING)ft_struniq.c \
 	   			$(STRING)ft_strcapitalize.c \
+	   			$(STRING)ft_strtoupper.c \
+	   			$(STRING)ft_strtolower.c \
 				$(MEMORY)ft_free.c \
 				$(MEMORY)ft_realloc.c \
 				$(MEMORY)ft_var_free.c \
