@@ -6,7 +6,7 @@
 #    By: fgeorgea <fgeorgea@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/03 11:47:36 by fgeorgea          #+#    #+#              #
-#    Updated: 2023/06/28 19:21:50 by fgeorgea         ###   ########.fr        #
+#    Updated: 2023/06/28 19:37:18 by fgeorgea         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -130,6 +130,7 @@ SRCS		=	$(CHAR)ft_isalnum.c \
 				$(FILE)ft_count_char.c \
 				$(FILE)ft_count_lines.c \
 				$(FILE)ft_file_to_array.c \
+				$(FILE)ft_cp.c \
 
 OBJS		 = 	$(SRCS:.c=.o)
 

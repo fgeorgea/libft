@@ -6,7 +6,7 @@
 /*   By: fgeorgea <fgeorgea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/28 19:10:24 by fgeorgea          #+#    #+#             */
-/*   Updated: 2023/06/28 19:19:47 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2023/06/28 19:45:44 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int	ft_count_char(const char *file)
 			close(fd);
 			return (0);
 		}
-		nbr_char += read_ret;		
+		nbr_char += read_ret;
 	}
 	close(fd);
 	return (nbr_char);
