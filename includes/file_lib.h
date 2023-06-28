@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   file_lib.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
+/*   By: fgeorgea <fgeorgea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/28 03:49:57 by fgeorgea          #+#    #+#             */
-/*   Updated: 2023/06/28 04:15:11 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2023/06/28 19:14:43 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,6 @@
 
 int		ft_count_lines(int fd);
 char	**ft_file_to_array(const char *file, int fd);
+int		ft_count_char(const char *file);
 
 #endif

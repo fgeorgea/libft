@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+         #
+#    By: fgeorgea <fgeorgea@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/03 11:47:36 by fgeorgea          #+#    #+#              #
-#    Updated: 2023/06/28 04:32:45 by fgeorgea         ###   ########.fr        #
+#    Updated: 2023/06/28 19:21:50 by fgeorgea         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -127,6 +127,7 @@ SRCS		=	$(CHAR)ft_isalnum.c \
 				$(ARRAY)ft_array_print.c \
 				$(ARRAY)ft_array_free.c \
 				$(VARIADICS)ft_close_var.c \
+				$(FILE)ft_count_char.c \
 				$(FILE)ft_count_lines.c \
 				$(FILE)ft_file_to_array.c \
 
