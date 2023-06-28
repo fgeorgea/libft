@@ -1,33 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_array_rev.c                                     :+:      :+:    :+:   */
+/*   file_lib.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/04 02:46:21 by fgeorgea          #+#    #+#             */
-/*   Updated: 2023/06/28 04:08:37 by fgeorgea         ###   ########.fr       */
+/*   Created: 2023/06/28 03:49:57 by fgeorgea          #+#    #+#             */
+/*   Updated: 2023/06/28 04:15:11 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#ifndef FILE_LIB_H
+# define FILE_LIB_H
 
-void	ft_array_rev(void **array)
-{
-	size_t	i;
-	size_t	len;
-	void	*tmp;
+int		ft_count_lines(int fd);
+char	**ft_file_to_array(const char *file, int fd);
 
-	if (!array || !*array)
-		return ;
-	i = 0;
-	len = ft_arraylen(array);
-	while (i < len)
-	{
-		tmp = array[i];
-		array[i] = array[len - 1];
-		array[len - 1] = tmp;
-		i++;
-		len--;
-	}
-}
+#endif

@@ -6,7 +6,7 @@
 #    By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/03 11:47:36 by fgeorgea          #+#    #+#              #
-#    Updated: 2023/06/28 03:47:02 by fgeorgea         ###   ########.fr        #
+#    Updated: 2023/06/28 04:32:45 by fgeorgea         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,6 +19,7 @@ LIST		=	list/
 STRING		=	string/
 MEMORY		=	memory/
 VARIADICS	=	variadics/
+FILE		=	file/
 
 SRCS		=	$(CHAR)ft_isalnum.c \
 				$(CHAR)ft_isalpha.c \
@@ -123,7 +124,11 @@ SRCS		=	$(CHAR)ft_isalnum.c \
 	   			$(ARRAY)ft_split.c \
 	   			$(ARRAY)ft_split_charset.c \
 				$(ARRAY)ft_arraydup.c \
+				$(ARRAY)ft_array_print.c \
+				$(ARRAY)ft_array_free.c \
 				$(VARIADICS)ft_close_var.c \
+				$(FILE)ft_count_lines.c \
+				$(FILE)ft_file_to_array.c \
 
 OBJS		 = 	$(SRCS:.c=.o)
 

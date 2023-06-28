@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   array.h                                            :+:      :+:    :+:   */
+/*   array_lib.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/25 00:02:20 by fgeorgea          #+#    #+#             */
-/*   Updated: 2023/06/25 01:32:32 by fgeorgea         ###   ########.fr       */
+/*   Updated: 2023/06/28 04:27:01 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,5 +20,7 @@ void	**ft_array_del(void **src, int pos);
 void	**ft_array_replace(void **src, void *new, int pos);
 void	*ft_array_get_value(void **array, int pos);
 char	**ft_arraydup(char **src);
+void	ft_array_print(char **array);
+void	*ft_array_free(char **array, int pos);
 
 #endif

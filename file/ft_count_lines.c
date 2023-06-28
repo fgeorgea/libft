@@ -1,33 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_array_rev.c                                     :+:      :+:    :+:   */
+/*   ft_count_lines.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fgeorgea <fgeorgea@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/06/04 02:46:21 by fgeorgea          #+#    #+#             */
-/*   Updated: 2023/06/28 04:08:37 by fgeorgea         ###   ########.fr       */
+/*   Created: 2023/06/28 03:53:02 by fgeorgea          #+#    #+#             */
+/*   Updated: 2023/06/28 04:12:34 by fgeorgea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-void	ft_array_rev(void **array)
+int	ft_count_lines(int fd)
 {
-	size_t	i;
-	size_t	len;
-	void	*tmp;
+	char	*str;
+	int		lines;
 
-	if (!array || !*array)
-		return ;
-	i = 0;
-	len = ft_arraylen(array);
-	while (i < len)
+	lines = 0;
+	while (1)
 	{
-		tmp = array[i];
-		array[i] = array[len - 1];
-		array[len - 1] = tmp;
-		i++;
-		len--;
+		str = get_next_line(fd);
+		if (!str)
+			break ;
+		free(str);
+		lines++;
 	}
+	close(fd);
+	return (lines);
 }
